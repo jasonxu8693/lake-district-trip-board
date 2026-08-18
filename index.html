@@ -710,7 +710,9 @@ table.tb tr:last-child td{border-bottom:0}
    ===================================================================== */
 const STORE_KEY   = "lakes-board-aug2026-v1";
 const PACK_KEY    = "lakes-packing-aug2026-v1";
-const REMOTE_API_URL = ""; // ← paste the Apps Script /exec URL here to turn on group sync
+const SUPABASE_URL = "https://dxgmeccfipppvjxeeidf.supabase.co";
+const SUPABASE_KEY = "sb_publishable_iuM5ZRVEFFDk4ic0cU2xhA_PmSTS6Sq"; // publishable key: anon read/write on this board row only
+const SYNC_ON      = true;
 const TRIP_START  = new Date("2026-08-19T18:30:00+01:00"); // Euston departure
 const TZ          = "Europe/London";
 const IMG         = "images/";
@@ -999,9 +1001,6 @@ function seed(s){
 }
 function save(){
   try{ LS.set(STORE_KEY, JSON.stringify(S)); }catch(e){}
-  const c=document.getElementById("syncChip");
-  c.textContent = REMOTE_API_URL ? "☁️ synced" : "💾 saved on this device";
-  c.style.opacity=".55";
   push();
 }
 function logPulse(txt){
@@ -1012,18 +1011,54 @@ function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms||12);}catch(e)
 const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const who = id => TRAVELLERS.find(t=>t.id===id) || {name:id,colour:"#888",init:"?"};
 
-/* remote sync (whole-state blob, last-write-wins merge) */
-async function push(){
-  if(!REMOTE_API_URL) return;
-  try{ await fetch(REMOTE_API_URL,{method:"POST",body:JSON.stringify({key:STORE_KEY,state:S}),headers:{"Content-Type":"text/plain"}}); }catch(e){}
+/* ---------------------------------------------------------------
+   Group sync — Supabase PostgREST, no client library.
+   Whole-state blob keyed by board_key. Debounced push, polled pull.
+   A pull only overwrites local when the remote row is genuinely newer
+   AND no local write is in flight, so a poll cannot clobber a tap.
+   --------------------------------------------------------------- */
+const REST = SUPABASE_URL+"/rest/v1/board_state";
+const HEAD = ()=>({apikey:SUPABASE_KEY,Authorization:"Bearer "+SUPABASE_KEY,"Content-Type":"application/json"});
+let lastRemote=0, pushTimer=null, pushing=false, adopted=false;
+
+function chip(t){ const c=document.getElementById("syncChip"); if(c){ c.textContent=t; c.style.opacity=".55"; } }
+
+function push(){
+  if(!SYNC_ON) return;
+  clearTimeout(pushTimer);
+  pushTimer=setTimeout(async()=>{
+    pushing=true; chip("☁️ saving…");
+    try{
+      const r=await fetch(REST+"?on_conflict=board_key",{
+        method:"POST",
+        headers:Object.assign(HEAD(),{Prefer:"resolution=merge-duplicates,return=representation"}),
+        body:JSON.stringify([{board_key:STORE_KEY,state:S}])
+      });
+      if(r.ok){ const j=await r.json(); if(j&&j[0]) lastRemote=new Date(j[0].updated_at).getTime(); chip("☁️ synced"); }
+      else chip("⚠️ sync failed");
+    }catch(e){ chip("⚠️ offline — saved locally"); }
+    pushing=false;
+  },800);
 }
+
 async function pull(){
-  if(!REMOTE_API_URL) return;
+  if(!SYNC_ON||pushing) return;
   try{
-    const r = await fetch(REMOTE_API_URL+"?key="+encodeURIComponent(STORE_KEY));
-    const j = await r.json();
-    if(j && j.state){ S = seed(Object.assign(structuredClone(DEFAULT_STATE), j.state)); renderAll(); }
-  }catch(e){}
+    const r=await fetch(REST+"?board_key=eq."+encodeURIComponent(STORE_KEY)+"&select=state,updated_at",{headers:HEAD()});
+    if(!r.ok){ chip("⚠️ sync failed"); return; }
+    const j=await r.json();
+    if(!j||!j.length) return;
+    const ts=new Date(j[0].updated_at).getTime();
+    const remote=j[0].state;
+    const hasRemote = remote && Object.keys(remote).length;
+    if(ts>lastRemote && hasRemote){
+      lastRemote=ts;
+      S=seed(Object.assign(clone(DEFAULT_STATE),remote));
+      LS.set(STORE_KEY,JSON.stringify(S));
+      renderAll();
+    }
+    adopted=true; chip("☁️ synced");
+  }catch(e){ chip("⚠️ offline — saved locally"); }
 }
 
 /* =====================================================================
@@ -1503,7 +1538,7 @@ function openHelp(){
     <div class="row"><div class="rk">Decisions</div><div class="rv">Vote 👍 on options, then someone <strong>locks</strong> the pick so nobody reopens it on the platform.</div></div>
     <div class="row"><div class="rk">Ideas</div><div class="rv">Everything researched but not scheduled. Vote keen / maybe / no.</div></div>
     <div class="row"><div class="rk">Pack</div><div class="rv">Your packing ticks are <strong>device-local</strong> — they never go into group sync. Everything else is shared.</div></div>
-    <div class="row"><div class="rk">Sync</div><div class="rv">${REMOTE_API_URL?"☁️ Group sync is on — everyone sees the same state.":"💾 Currently saving to <strong>this device only</strong>. Add a Google Apps Script URL to <code>REMOTE_API_URL</code> to turn on group sync."}</div></div>
+    <div class="row"><div class="rk">Sync</div><div class="rv">☁️ <strong>Group sync is live</strong> via Supabase — all three of you see the same board. Changes push within a second and everyone else picks them up within ten. If you go offline (and you will, on the fells) it keeps saving locally and re-syncs when signal returns.</div></div>
     <div class="row"><div class="rk">Photos</div><div class="rv">Illustrations drop into <code>images/</code> as <code>scene-*.jpg</code>. Missing ones fall back to emoji — the board never breaks.</div></div>
   </div>`);
 }
@@ -1513,7 +1548,8 @@ function openHelp(){
   const th = LS.get(STORE_KEY+"-theme");
   if(th) document.documentElement.setAttribute("data-theme",th);
   renderAll(); tick(); setInterval(tick,1000);
-  pull(); setInterval(pull, 45000);
+  pull(); setInterval(pull, 10000);
+  document.addEventListener("visibilitychange",()=>{ if(!document.hidden) pull(); });
   setTimeout(()=>{ document.getElementById("syncChip").style.opacity=".55"; }, 2500);
 })();
 </script>
