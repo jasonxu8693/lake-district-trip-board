@@ -1,0 +1,1521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Lakes — 19–24 Aug 2026</title>
+<meta name="description" content="Lake District trip board — Jason, Kat & Liz, 19–24 August 2026. Ambleside base.">
+<meta name="theme-color" content="#20303a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   THE LAKES — trip board
+   Art direction: Lakeland slate + fell green + tarn blue.
+   Layered fell silhouettes, drifting mist, drystone-wall rules.
+   ============================================================ */
+:root{
+  --slate:#4a5265; --slate-d:#333a49; --slate-l:#6d7689;
+  --fell:#3d8f5f; --fell-d:#20503c; --fell-l:#5aa87a;
+  --tarn:#2f7fae; --tarn-l:#8fc2dd; --tarn-d:#1d5578;
+  --bracken:#a4652a; --bracken-l:#c98c4c;
+  --heather:#7d5fae;
+  --stone:#9a9a90;
+  --cream:#f6f2e9; --cream-2:#efe8db;
+  --ink:#1c2029; --ink-2:#39404f; --ink-3:#5d6675;
+
+  --bg:#f2ede2; --bg-2:#ffffff; --card:#ffffff; --card-2:#faf7f0;
+  --line:#ddd6c7; --line-2:#eae4d7;
+  --tx:var(--ink); --tx-2:var(--ink-2); --tx-3:var(--ink-3);
+  --accent:var(--fell); --accent-2:var(--tarn);
+
+  --ok:#2e8b57; --warn:#c9821f; --bad:#c0392b; --lock:#7d5fae;
+  --r:14px; --r-lg:20px; --r-sm:9px;
+  --sh:0 1px 2px rgba(28,32,41,.05),0 4px 14px rgba(28,32,41,.06);
+  --sh-lg:0 8px 30px rgba(28,32,41,.13);
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --ff:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;
+  --fd:"Fraunces","Iowan Old Style",Georgia,serif;
+  --dock-h:0px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#161c24; --bg-2:#1c232d; --card:#1e2630; --card-2:#232c37;
+    --line:#313c49; --line-2:#2a333e;
+    --tx:#e9eef4; --tx-2:#b9c4d1; --tx-3:#8794a3;
+    --cream:#1e2630; --cream-2:#232c37;
+    --tarn-l:#5ba3cc; --fell-l:#5aa87a;
+    --sh:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.35);
+    --sh-lg:0 10px 34px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161c24; --bg-2:#1c232d; --card:#1e2630; --card-2:#232c37;
+  --line:#313c49; --line-2:#2a333e;
+  --tx:#e9eef4; --tx-2:#b9c4d1; --tx-3:#8794a3;
+  --cream:#1e2630; --cream-2:#232c37;
+  --tarn-l:#5ba3cc; --fell-l:#5aa87a;
+  --sh:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.35);
+  --sh-lg:0 10px 34px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--tx);font-family:var(--ff);
+  font-size:15px;line-height:1.55;overflow-x:hidden;
+  padding-bottom:var(--dock-h);
+}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+a{color:var(--tarn);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+h1,h2,h3,h4{font-family:var(--fd);font-weight:700;letter-spacing:-.015em;margin:0}
+.mono{font-family:var(--mono)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(178deg,#20303a 0%,#2b4150 45%,#375464 100%);color:#eef4fb;padding:34px 0 0}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 380px at 78% -12%,rgba(143,194,221,.30),transparent 62%);pointer-events:none}
+.fells{position:absolute;left:0;right:0;bottom:0;height:210px;pointer-events:none}
+.fells svg{width:100%;height:100%;display:block}
+.mist{position:absolute;left:-25%;right:-25%;bottom:52px;height:120px;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(238,244,251,.30),transparent 72%);
+  filter:blur(14px);animation:drift 46s linear infinite}
+@keyframes drift{0%{transform:translateX(-7%)}50%{transform:translateX(7%)}100%{transform:translateX(-7%)}}
+.hero-in{position:relative;z-index:3;padding-bottom:120px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#bcd6e6;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);padding:6px 13px;border-radius:999px;backdrop-filter:blur(7px)}
+.hero h1{font-size:clamp(38px,8.2vw,74px);line-height:.95;margin:15px 0 8px;font-weight:900;color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.28)}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--tarn-l)}
+.sub{font-size:clamp(14px,2.3vw,17.5px);color:#cfe0ec;font-weight:500;max-width:60ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+.hm{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.17);padding:7px 13px;border-radius:999px;font-size:12.5px;font-weight:600;color:#e4eef6;backdrop-filter:blur(7px)}
+
+.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:11px;margin-top:24px}
+.hs{background:rgba(255,255,255,.085);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:13px 15px;backdrop-filter:blur(9px)}
+.hs .k{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#a9c6d8;font-weight:700}
+.hs .v{font-family:var(--fd);font-size:25px;font-weight:800;color:#fff;line-height:1.15;margin-top:3px}
+.hs .v small{font-size:12.5px;font-weight:600;color:#bcd6e6;font-family:var(--ff)}
+
+.ring-wrap{display:flex;align-items:center;gap:15px}
+.ring{position:relative;width:74px;height:74px;flex:0 0 74px}
+.ring svg{transform:rotate(-90deg)}
+.ring .lbl{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--fd);font-size:19px;font-weight:800;color:#fff}
+
+/* ---------- TABS ---------- */
+.tabs-outer{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:9px 0;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--tx-2);border:1px solid transparent;white-space:nowrap;transition:all .18s}
+.tab:hover{background:var(--card-2);color:var(--tx)}
+.tab[aria-selected="true"]{background:var(--slate);color:#fff;border-color:var(--slate-d);box-shadow:var(--sh)}
+:root[data-theme="dark"] .tab[aria-selected="true"]{background:var(--tarn);border-color:var(--tarn-d)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .tab[aria-selected="true"]{background:var(--tarn);border-color:var(--tarn-d)}
+}
+.tab .n{font-size:10.5px;background:rgba(255,255,255,.22);padding:1px 7px;border-radius:999px;font-weight:800}
+.tab[aria-selected="false"] .n{background:var(--line);color:var(--tx-3)}
+
+main{padding:26px 0 60px}
+.panel{display:none;animation:rise .38s cubic-bezier(.2,.7,.3,1)}
+.panel.on{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(11px)}to{opacity:1;transform:none}}
+
+/* ---------- CARDS ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh);overflow:hidden}
+.card + .card{margin-top:16px}
+.card-h{padding:16px 19px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card-h h2{font-size:19px}
+.card-h h3{font-size:16.5px}
+.card-b{padding:19px}
+.card-b.tight{padding:13px 19px}
+.lede{color:var(--tx-2);font-size:13.5px;margin:0}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.sec-h{display:flex;align-items:baseline;gap:11px;margin:30px 0 13px}
+.sec-h h2{font-size:22px}
+.sec-h .hint{font-size:12.5px;color:var(--tx-3)}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3.5px 10px;border-radius:999px;font-size:11.5px;font-weight:700;background:var(--card-2);border:1px solid var(--line);color:var(--tx-2)}
+.chip.ok{background:color-mix(in srgb,var(--ok) 13%,transparent);border-color:color-mix(in srgb,var(--ok) 34%,transparent);color:var(--ok)}
+.chip.warn{background:color-mix(in srgb,var(--warn) 15%,transparent);border-color:color-mix(in srgb,var(--warn) 38%,transparent);color:var(--warn)}
+.chip.bad{background:color-mix(in srgb,var(--bad) 13%,transparent);border-color:color-mix(in srgb,var(--bad) 34%,transparent);color:var(--bad)}
+.chip.lock{background:color-mix(in srgb,var(--lock) 13%,transparent);border-color:color-mix(in srgb,var(--lock) 36%,transparent);color:var(--lock)}
+.chip.tarn{background:color-mix(in srgb,var(--tarn) 13%,transparent);border-color:color-mix(in srgb,var(--tarn) 34%,transparent);color:var(--tarn)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8.5px 15px;border-radius:10px;font-size:13px;font-weight:700;background:var(--card-2);border:1px solid var(--line);color:var(--tx);transition:transform .12s,box-shadow .18s,background .18s}
+.btn:hover{background:var(--bg-2);box-shadow:var(--sh)}
+.btn:active{transform:scale(.965)}
+.btn.p{background:var(--fell);border-color:var(--fell-d);color:#fff}
+.btn.p:hover{background:var(--fell-l)}
+.btn.t{background:var(--tarn);border-color:var(--tarn-d);color:#fff}
+.btn.t:hover{background:var(--tarn-l);color:#0d2b3c}
+.btn.sm{padding:5.5px 11px;font-size:12px;border-radius:8px}
+.btn.gh{background:transparent}
+.btn[disabled]{opacity:.45;pointer-events:none}
+
+/* key-value rows */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:13.5px}
+.kv dt{color:var(--tx-3);font-weight:600;white-space:nowrap}
+.kv dd{margin:0;color:var(--tx);font-weight:500}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line-2)}
+.row:last-child{border-bottom:0}
+.row .rk{flex:0 0 96px;font-size:12px;font-weight:800;color:var(--tx-3);font-family:var(--mono);padding-top:1px}
+.row .rv{flex:1;font-size:13.5px}
+.row .rv strong{font-weight:700}
+
+/* ---------- BOARD / progress track ---------- */
+.track{position:relative;padding:22px 0 8px;overflow-x:auto;scrollbar-width:thin}
+.track-in{display:flex;align-items:flex-start;gap:0;min-width:min-content;padding:0 6px}
+.stop{position:relative;flex:0 0 128px;text-align:center}
+.stop::before{content:"";position:absolute;top:26px;left:-50%;width:100%;height:3px;background:repeating-linear-gradient(90deg,var(--line) 0 7px,transparent 7px 13px)}
+.stop:first-child::before{display:none}
+.stop.done::before{background:var(--fell)}
+.bead{position:relative;z-index:2;width:53px;height:53px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:22px;background:var(--card);border:3px solid var(--line);box-shadow:var(--sh);transition:all .3s}
+.stop.done .bead{background:var(--fell);border-color:var(--fell-d);color:#fff;transform:scale(1.06)}
+.stop.now .bead{border-color:var(--bracken);box-shadow:0 0 0 5px color-mix(in srgb,var(--bracken) 20%,transparent)}
+.stop .nm{font-size:11.5px;font-weight:700;margin-top:8px;color:var(--tx-2);line-height:1.3;padding:0 5px}
+.stop.done .nm{color:var(--tx)}
+.toks{display:flex;justify-content:center;gap:3px;margin-top:6px;min-height:20px}
+.tok{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:10px;border:2px solid var(--card);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+
+.hubs{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px}
+.hub{display:block;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;box-shadow:var(--sh);transition:transform .16s,box-shadow .2s}
+.hub:hover{transform:translateY(-2px);box-shadow:var(--sh-lg);text-decoration:none}
+.hub .i{font-size:24px}
+.hub .t{font-family:var(--fd);font-size:16px;font-weight:700;margin-top:7px}
+.hub .d{font-size:12px;color:var(--tx-3);margin-top:2px}
+
+/* pulse feed */
+.pulse{max-height:290px;overflow-y:auto}
+.pl{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--line-2);font-size:13px}
+.pl:last-child{border-bottom:0}
+.pl .av{flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}
+.pl .tm{color:var(--tx-3);font-size:11.5px;white-space:nowrap}
+
+/* ---------- ITINERARY ---------- */
+.daynav{display:flex;gap:7px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:none}
+.daynav::-webkit-scrollbar{display:none}
+.dbtn{flex:0 0 auto;padding:9px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-size:12.5px;font-weight:700;text-align:left;min-width:104px;transition:all .18s}
+.dbtn:hover{border-color:var(--slate-l)}
+.dbtn[aria-selected="true"]{background:var(--slate);border-color:var(--slate-d);color:#fff;box-shadow:var(--sh)}
+.dbtn .dd{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.72;font-weight:800}
+.dbtn .dc{font-size:11px;opacity:.8;font-weight:600}
+.dbtn.dropped{opacity:.42}
+
+.dayhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:17px 19px;background:linear-gradient(135deg,var(--card-2),var(--card));border-bottom:1px solid var(--line-2)}
+.dayhead h3{font-size:20px}
+.dayhead .dsub{font-size:12.5px;color:var(--tx-3);margin-top:2px}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;border-bottom:1px solid var(--line-2);background:var(--card-2)}
+.gl{padding:12px 19px;border-right:1px solid var(--line-2)}
+.gl:last-child{border-right:0}
+.gl .k{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-3);font-weight:800}
+.gl .v{font-size:13px;font-weight:600;margin-top:3px}
+
+.stops{padding:8px 19px 4px}
+.it{display:flex;gap:13px;padding:13px 0;border-bottom:1px dashed var(--line-2);align-items:flex-start}
+.it:last-child{border-bottom:0}
+.it .shot{flex:0 0 62px;height:62px;border-radius:12px;overflow:hidden;background:var(--card-2);border:1px solid var(--line);display:grid;place-items:center;font-size:26px;position:relative}
+.it .shot img{width:100%;height:100%;object-fit:cover}
+.it .body{flex:1;min-width:0}
+.it .tm{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--bracken)}
+.it .ti{font-weight:700;font-size:14.5px;margin-top:1px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.it .de{font-size:12.5px;color:var(--tx-2);margin-top:3px}
+.it .acts{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap}
+.trailbadge{font-size:10.5px;font-weight:800;background:color-mix(in srgb,var(--fell) 14%,transparent);color:var(--fell-d);border:1px solid color-mix(in srgb,var(--fell) 35%,transparent);padding:2px 8px;border-radius:999px}
+:root[data-theme="dark"] .trailbadge{color:var(--fell-l)}
+[data-trail]{cursor:pointer}
+[data-trail]:hover .ti{color:var(--fell)}
+.who{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:999px;color:#fff}
+
+.details{border-top:1px solid var(--line-2);background:var(--card-2)}
+.details summary{padding:13px 19px;font-weight:700;font-size:13.5px;cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px}
+.details summary::-webkit-details-marker{display:none}
+.details summary::before{content:"▸";font-size:11px;transition:transform .2s;color:var(--tx-3)}
+.details[open] summary::before{transform:rotate(90deg)}
+.details .dbody{padding:0 19px 17px}
+
+/* ---------- MARKET ---------- */
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .16s,box-shadow .2s}
+.idea:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.idea .ph{height:124px;background:var(--card-2);display:grid;place-items:center;font-size:42px;position:relative;overflow:hidden}
+.idea .ph img{width:100%;height:100%;object-fit:cover}
+.idea .ib{padding:13px;flex:1;display:flex;flex-direction:column}
+.idea h4{font-size:15px;line-height:1.25}
+.idea .pl2{font-size:11.5px;color:var(--tx-3);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+.idea .wy{font-size:12.5px;color:var(--tx-2);margin-top:6px;flex:1}
+.votes{display:flex;gap:5px;margin-top:11px}
+.vb{flex:1;padding:6.5px 4px;border-radius:9px;border:1px solid var(--line);background:var(--card-2);font-size:11.5px;font-weight:800;text-align:center;transition:all .16s}
+.vb:hover{border-color:var(--slate-l)}
+.vb.on.keen{background:var(--ok);border-color:var(--ok);color:#fff}
+.vb.on.maybe{background:var(--warn);border-color:var(--warn);color:#fff}
+.vb.on.no{background:var(--bad);border-color:var(--bad);color:#fff}
+.tally{display:flex;gap:4px;margin-top:7px;flex-wrap:wrap;min-height:19px}
+.tl{font-size:10px;font-weight:800;padding:2px 6px;border-radius:999px;color:#fff}
+
+/* ---------- DESK ---------- */
+.room{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);box-shadow:var(--sh)}
+.room + .room{margin-top:14px}
+.room-h{padding:14px 17px;background:var(--card-2);border-bottom:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:11px;flex-wrap:wrap}
+.room-h h4{font-size:16px}
+.opts{padding:13px 17px;display:grid;gap:11px}
+.opt{border:1px solid var(--line);border-radius:12px;padding:13px;background:var(--card-2)}
+.opt.locked{border-color:var(--lock);background:color-mix(in srgb,var(--lock) 7%,var(--card-2))}
+.opt-t{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.opt-m{font-size:12.5px;color:var(--tx-2);margin-top:5px}
+.opt-f{display:flex;align-items:center;gap:7px;margin-top:10px;flex-wrap:wrap}
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:6px;margin-top:10px}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.sc .n{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--tx-3);font-weight:800}
+.sc .s{font-size:15px;font-weight:800;font-family:var(--fd)}
+.sc.hi .s{color:var(--ok)} .sc.md .s{color:var(--warn)} .sc.lo .s{color:var(--bad)}
+.sc .r{font-size:10.5px;color:var(--tx-3);line-height:1.35}
+.verdict{margin-top:9px;font-size:12.5px;padding:8px 11px;border-radius:9px;background:color-mix(in srgb,var(--tarn) 9%,transparent);border:1px solid color-mix(in srgb,var(--tarn) 26%,transparent)}
+
+/* ---------- TASKS ---------- */
+.task{border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--sh);overflow:hidden}
+.task + .task{margin-top:12px}
+.task.blocking{border-left:4px solid var(--bad)}
+.task.done{opacity:.62}
+.task-h{padding:14px 17px;display:flex;align-items:flex-start;gap:12px}
+.task-h .tk{flex:1;min-width:0}
+.task-h h4{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.task-h .ts{font-size:12.5px;color:var(--tx-2);margin-top:4px}
+.tick{flex:0 0 26px;height:26px;border-radius:8px;border:2px solid var(--line);background:var(--card-2);display:grid;place-items:center;font-size:14px;transition:all .18s;margin-top:2px}
+.tick.on{background:var(--ok);border-color:var(--ok);color:#fff}
+
+/* ---------- PACK ---------- */
+.pk{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:15px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:9px}
+.gal .gi{aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--card-2);border:1px solid var(--line);display:grid;place-items:center;font-size:40px;cursor:pointer;transition:transform .16s}
+.gal .gi:hover{transform:scale(1.03)}
+.gal .gi img{width:100%;height:100%;object-fit:cover}
+.plist{display:grid;gap:5px}
+.pi{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:9px;background:var(--card-2);border:1px solid var(--line-2);font-size:13px;cursor:pointer;transition:all .15s}
+.pi:hover{border-color:var(--line)}
+.pi.on{opacity:.5;text-decoration:line-through}
+.pi .pb{flex:0 0 18px;height:18px;border-radius:5px;border:2px solid var(--line);display:grid;place-items:center;font-size:10px}
+.pi.on .pb{background:var(--ok);border-color:var(--ok);color:#fff}
+.pcat{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:var(--tx-3);font-weight:800;margin:14px 0 7px}
+.pcat:first-child{margin-top:0}
+
+table.tb{width:100%;border-collapse:collapse;font-size:12.5px}
+table.tb th{text-align:left;padding:8px 10px;background:var(--card-2);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--tx-3);border-bottom:1px solid var(--line)}
+table.tb td{padding:8px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+table.tb tr:last-child td{border-bottom:0}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---------- ROSTER ---------- */
+.crew{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
+.mate{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:15px;box-shadow:var(--sh)}
+.mate .top{display:flex;align-items:center;gap:11px}
+.mate .avx{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:16px;font-weight:800;color:#fff}
+.mate .nm2{font-family:var(--fd);font-size:17px;font-weight:700}
+.mate .rl{font-size:11.5px;color:var(--tx-3)}
+.pick{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}
+.pk2{padding:4px 9px;border-radius:8px;border:1px solid var(--line);background:var(--card-2);font-size:15px;transition:all .15s}
+.pk2.on{background:var(--slate);border-color:var(--slate-d);transform:scale(1.08)}
+
+/* ---------- MODALS ---------- */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.on{display:flex}
+.modal .bd{position:absolute;inset:0;background:rgba(15,20,26,.68);backdrop-filter:blur(5px)}
+.modal .mb{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);max-width:620px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:var(--sh-lg);animation:pop .26s cubic-bezier(.2,.8,.3,1)}
+@keyframes pop{from{opacity:0;transform:scale(.95) translateY(14px)}to{opacity:1;transform:none}}
+.modal .mh{padding:17px 19px;border-bottom:1px solid var(--line-2);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;position:sticky;top:0;background:var(--card);z-index:2}
+.modal .mh h3{font-size:19px}
+.modal .mc{padding:19px}
+.mshot{width:100%;height:186px;object-fit:cover;background:var(--card-2)}
+.stat4{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin-bottom:15px}
+.st{background:var(--card-2);border:1px solid var(--line);border-radius:10px;padding:9px 11px;text-align:center}
+.st .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--tx-3);font-weight:800}
+.st .v{font-family:var(--fd);font-size:17px;font-weight:800;margin-top:2px}
+.x{font-size:22px;line-height:1;color:var(--tx-3);padding:3px 7px;border-radius:8px}
+.x:hover{background:var(--card-2);color:var(--tx)}
+#lightbox .mb{max-width:940px;background:#0d1216;border-color:#1d262e}
+#lbimg{width:100%;max-height:78vh;object-fit:contain;background:#0d1216}
+.lbnav{display:flex;align-items:center;justify-content:space-between;padding:11px 15px;color:#c8d6e0;font-size:12.5px;font-weight:700}
+
+/* ---------- DOCK ---------- */
+.dock{display:none}
+@media (max-width:640px){
+  :root{--dock-h:66px}
+  .dock{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom));justify-content:space-around}
+  .dk{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 2px;border-radius:11px;font-size:9.5px;font-weight:800;color:var(--tx-3);letter-spacing:.03em}
+  .dk .di{font-size:19px}
+  .dk[aria-selected="true"]{color:var(--fell);background:color-mix(in srgb,var(--fell) 11%,transparent)}
+  .tabs-outer{display:none}
+  .wrap{padding:0 14px}
+  .hero-in{padding-bottom:96px}
+  .fells{height:150px}
+  .row .rk{flex:0 0 74px}
+  .gl{border-right:0;border-bottom:1px solid var(--line-2)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+.hide{display:none !important}
+.sync{position:fixed;right:14px;bottom:calc(var(--dock-h) + 14px);z-index:80;font-size:11px;font-weight:800;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);box-shadow:var(--sh);color:var(--tx-3)}
+.foot{padding:28px 0 40px;text-align:center;font-size:11.5px;color:var(--tx-3);line-height:1.7}
+.warnbar{background:color-mix(in srgb,var(--bad) 11%,var(--card));border:1px solid color-mix(in srgb,var(--bad) 34%,transparent);border-left:4px solid var(--bad);border-radius:var(--r);padding:14px 17px;margin-bottom:16px}
+.warnbar h3{font-size:16px;color:var(--bad);display:flex;align-items:center;gap:8px}
+.warnbar p{margin:6px 0 0;font-size:13px;color:var(--tx-2)}
+.okbar{background:color-mix(in srgb,var(--ok) 10%,var(--card));border:1px solid color-mix(in srgb,var(--ok) 32%,transparent);border-left:4px solid var(--ok);border-radius:var(--r);padding:14px 17px;margin-bottom:16px}
+.okbar h3{font-size:16px;color:var(--ok)}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="mist"></div>
+  <div class="fells" aria-hidden="true">
+    <svg viewBox="0 0 1440 210" preserveAspectRatio="none">
+      <path d="M0,150 L120,104 L215,132 L330,70 L430,116 L540,58 L660,110 L770,80 L880,126 L1000,88 L1120,124 L1240,92 L1340,130 L1440,106 L1440,210 L0,210 Z" fill="#2b4150" opacity=".55"/>
+      <path d="M0,172 L110,138 L220,163 L340,116 L455,152 L580,110 L700,150 L820,124 L940,158 L1060,128 L1180,160 L1300,132 L1440,164 L1440,210 L0,210 Z" fill="#22343f" opacity=".8"/>
+      <path d="M0,192 L140,175 L280,190 L420,170 L560,188 L700,168 L840,187 L980,171 L1120,190 L1260,174 L1440,190 L1440,210 L0,210 Z" fill="#1a2a33"/>
+    </svg>
+  </div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">🏞️ Cumbria · England</span>
+    <h1>The <em>Lakes</em></h1>
+    <p class="sub">Five nights on the fells. One night Windermere, four in Ambleside, a hire car from Thursday — and one very big Saturday.</p>
+    <div class="hero-meta">
+      <span class="hm">📅 Wed 19 – Mon 24 Aug 2026</span>
+      <span class="hm">🛏️ Ambleside base</span>
+      <span class="hm">🚆 Euston 18:30</span>
+      <span class="hm" id="clockPill">🕐 —</span>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="k">Departs in</div><div class="v" id="cdown">—</div></div>
+      <div class="hs"><div class="k">Wainwrights, Sat</div><div class="v">8 <small>· 928 m</small></div></div>
+      <div class="hs"><div class="k">Daylight</div><div class="v">14<small>h 30m</small></div></div>
+      <div class="hs">
+        <div class="ring-wrap">
+          <div class="ring">
+            <svg width="74" height="74" viewBox="0 0 74 74">
+              <circle cx="37" cy="37" r="31" fill="none" stroke="rgba(255,255,255,.17)" stroke-width="7"/>
+              <circle id="ringArc" cx="37" cy="37" r="31" fill="none" stroke="#5aa87a" stroke-width="7" stroke-linecap="round" stroke-dasharray="195" stroke-dashoffset="195" style="transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.3,1)"/>
+            </svg>
+            <div class="lbl" id="ringPct">0%</div>
+          </div>
+          <div><div class="k" style="font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#a9c6d8;font-weight:700">Trip prep</div><div style="font-size:12.5px;color:#cfe0ec;font-weight:600" id="ringSub">— of — done</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= TABS ================= -->
+<div class="tabs-outer">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="board" aria-selected="true">🗺️ Board</button>
+      <button class="tab" role="tab" data-tab="itin" aria-selected="false">📅 Itinerary</button>
+      <button class="tab" role="tab" data-tab="jobs" aria-selected="false">✅ Jobs <span class="n" id="tabJobsN">0</span></button>
+      <button class="tab" role="tab" data-tab="desk" aria-selected="false">🗂️ Decisions</button>
+      <button class="tab" role="tab" data-tab="market" aria-selected="false">💡 Ideas</button>
+      <button class="tab" role="tab" data-tab="pack" aria-selected="false">🎒 Pack</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- ================= BOARD ================= -->
+<section class="panel on" id="p-board">
+  <div id="blockerSlot"></div>
+
+  <div class="card">
+    <div class="card-h">
+      <div><h2>Trip prep track</h2><p class="lede">Everything that still has to happen before the fells. All three of you move together.</p></div>
+      <span class="chip" id="trackChip">—</span>
+    </div>
+    <div class="card-b">
+      <div class="track"><div class="track-in" id="track"></div></div>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>Jump to</h2></div>
+  <div class="hubs">
+    <button class="hub" data-goto="itin"><div class="i">📅</div><div class="t">Day by day</div><div class="d">6 days, hour by hour</div></button>
+    <button class="hub" data-goto="jobs"><div class="i">✅</div><div class="t">Open jobs</div><div class="d" id="hubJobs">—</div></button>
+    <button class="hub" data-goto="desk"><div class="i">🗂️</div><div class="t">Decisions</div><div class="d">Thursday, Liz, Monday desk</div></button>
+    <button class="hub" data-goto="market"><div class="i">💡</div><div class="t">Ideas &amp; votes</div><div class="d" id="hubIdeas">—</div></button>
+    <button class="hub" data-goto="pack"><div class="i">🎒</div><div class="t">On-the-ground</div><div class="d">Buses, cash, packing</div></button>
+    <button class="hub" id="btnBookings"><div class="i">🔐</div><div class="t">Bookings vault</div><div class="d">Refs, seats, contacts</div></button>
+  </div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="card">
+      <div class="card-h"><h3>📡 Crew pulse</h3><button class="btn sm gh" id="pulseClear">Mark read</button></div>
+      <div class="card-b tight"><div class="pulse" id="pulse"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-h"><h3>🌦️ The forecast that shapes the week</h3><span class="chip">Checked 18 Aug</span></div>
+      <div class="card-b">
+        <div class="scroll-x"><table class="tb">
+          <thead><tr><th>Day</th><th>Temp</th><th>Rain</th><th>Shape</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Wed 19</strong></td><td>17° / 12°</td><td>70%</td><td>Travel only — doesn't matter</td></tr>
+            <tr><td><strong>Thu 20</strong></td><td>18° / 9°</td><td class="mono" style="color:var(--bad);font-weight:800">60%</td><td>🔴 The wet day. Wansfell at risk</td></tr>
+            <tr><td><strong>Fri 21</strong></td><td>17° / 9°</td><td>40%</td><td>Fells 70% cloud-free, wind &lt;10 mph</td></tr>
+            <tr><td><strong>Sat 22</strong></td><td>18° / 8°</td><td style="color:var(--ok);font-weight:800">20%</td><td>🟢 Dry, gusts 13 mph — Fairfield is on</td></tr>
+            <tr><td><strong>Sun 23</strong></td><td>19° / 8°</td><td style="color:var(--ok);font-weight:800">10%</td><td>🟢 Best day of the week. Catbells</td></tr>
+            <tr><td><strong>Mon 24</strong></td><td>19° / 10°</td><td>20%</td><td>Work + travel home</td></tr>
+          </tbody>
+        </table></div>
+        <div class="verdict" style="margin-top:12px">🟢 <strong>Saturday and Sunday are both dry and light-wind.</strong> The Langdale wet-weather flex is <em>not</em> needed. 🔴 Thursday is the wet one — Jenkin Crag is the fallback if Wansfell is a washout. <strong>Recheck Friday morning.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>The crew</h2><span class="hint">tap a piece to claim it</span></div>
+  <div class="crew" id="crew"></div>
+</section>
+
+<!-- ================= ITINERARY ================= -->
+<section class="panel" id="p-itin">
+  <div class="daynav" id="daynav"></div>
+  <div id="dayBody"></div>
+</section>
+
+<!-- ================= JOBS ================= -->
+<section class="panel" id="p-jobs">
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-h"><div><h2>Open jobs</h2><p class="lede">Straight from the Notion page. Red = must land before you get on the train.</p></div><span class="chip" id="jobsChip">—</span></div>
+  </div>
+  <div id="jobs"></div>
+</section>
+
+<!-- ================= DESK ================= -->
+<section class="panel" id="p-desk">
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-h"><div><h2>Decision rooms</h2><p class="lede">The live calls. Vote, then someone locks it so nobody re-litigates on the platform.</p></div></div>
+  </div>
+  <div id="desk"></div>
+</section>
+
+<!-- ================= MARKET ================= -->
+<section class="panel" id="p-market">
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-h"><div><h2>Ideas &amp; votes</h2><p class="lede">Everything researched but not locked into a day. Vote keen / maybe / no — the itinerary stays manual.</p></div><span class="chip" id="mktChip">—</span></div>
+  </div>
+  <div class="ideas" id="ideas"></div>
+</section>
+
+<!-- ================= PACK ================= -->
+<section class="panel" id="p-pack">
+  <div class="pk">
+    <div class="card">
+      <div class="card-h"><h3>💷 Money</h3></div>
+      <div class="card-b">
+        <dl class="kv">
+          <dt>Currency</dt><dd>GBP £ — home currency, nothing to change</dd>
+          <dt>Cards</dt><dd>Fine everywhere in town. Contactless on all buses</dd>
+          <dt>Tipping</dt><dd>10–12.5% if service isn't included</dd>
+        </dl>
+        <div class="warnbar" style="margin:14px 0 0">
+          <h3>🪙 Draw coins, not just notes</h3>
+          <p>The National Park confirms card payment <strong>fails at some car parks with no internet</strong>. <strong>New Dungeon Ghyll has no phone-pay at all</strong> — the signal is dead. Bring <strong>~£20 in £1 coins</strong>. This is the single most-missed Lakes detail and you now have a car.</p>
+        </div>
+        <div style="margin-top:13px"><strong style="font-size:13px">Parking apps — install all three</strong><div class="chips" style="margin-top:7px"><span class="chip">RingGo</span><span class="chip">PayByPhone</span><span class="chip">JustPark</span></div><p class="lede" style="margin-top:7px">The Lakes use all three depending on which car park you land in. No single app covers it.</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>📶 Data &amp; signal</h3></div>
+      <div class="card-b">
+        <dl class="kv">
+          <dt>SIM</dt><dd>Home SIM. Domestic — nothing to arrange</dd>
+          <dt>Town centres</dt><dd>Ambleside, Windermere, Keswick all workable</dd>
+        </dl>
+        <div class="warnbar" style="margin:14px 0 0">
+          <h3>📵 The valleys are blackspots</h3>
+          <p><strong>Kirkstone, Honister, Wrynose, Hardknott and essentially every fell path</strong> are documented dead zones — the fells screen signal even close to town. <strong>Never schedule a call on Saturday or Sunday.</strong> Those are the mountain days.</p>
+        </div>
+        <div style="margin-top:13px"><strong style="font-size:13px">Download before you leave</strong>
+          <div class="rows" style="margin-top:6px">
+            <div class="row"><div class="rk">Maps</div><div class="rv">Offline Google Maps for Ambleside, Windermere, Keswick, Langdale</div></div>
+            <div class="row"><div class="rk">OS</div><div class="rv"><strong>OL5, OL6, OL7</strong> — the three sheets that cover this trip</div></div>
+            <div class="row"><div class="rk">Apps</div><div class="rv">Stagecoach Bus · RingGo · PayByPhone · JustPark</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>🚌 Getting around</h3></div>
+      <div class="card-b">
+        <p class="lede" style="margin-bottom:11px"><strong>Car from Thu 12:00 to Mon 17:30.</strong> Buses matter on Wednesday, and as the backstop any time the car is elsewhere. All Stagecoach Cumbria, summer network to 1 Nov.</p>
+        <div class="scroll-x"><table class="tb">
+          <thead><tr><th>Route</th><th>Corridor</th><th>From Ambleside</th><th>Last</th></tr></thead>
+          <tbody>
+            <tr><td><strong>555</strong></td><td>Windermere–Ambleside–Grasmere–<strong>Keswick</strong></td><td>Wind 11m · Gras 20m · <strong>Kes 47m</strong></td><td>~23:01 from Keswick</td></tr>
+            <tr><td><strong>599</strong></td><td>Open top, Bowness–Ambleside–Grasmere</td><td>Gras 20m</td><td>~19:35 — <strong>no late runs</strong></td></tr>
+            <tr><td><strong>505</strong></td><td>Ambleside–Hawkshead–Coniston</td><td>Hawk 20m · Con 33m</td><td>⚠️ last back may be 15:35</td></tr>
+            <tr><td><strong>516</strong></td><td>Langdale Rambler → Dungeon Ghyll</td><td>25–30m</td><td><strong>~22:26</strong> — best late bus in the region</td></tr>
+            <tr><td><strong>508</strong></td><td>Glenridding / Ullswater via Windermere</td><td>first 08:55 from Wind</td><td>19:58 from Patterdale</td></tr>
+            <tr><td><strong>77/77A</strong></td><td>Keswick–Buttermere–Honister</td><td>circuit ~1h50</td><td>18:30 Mon–Sat, <strong>16:30 Sun</strong></td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:13px"><strong style="font-size:13px">Tickets</strong>
+          <div class="chips" style="margin-top:7px">
+            <span class="chip">Central Lakes Dayrider <strong>£8.50</strong></span>
+            <span class="chip">Explorer 1-day <strong>£11.50</strong></span>
+            <span class="chip">Explorer 3-day <strong>£26</strong></span>
+            <span class="chip">Single fare cap <strong>£3</strong></span>
+          </div>
+          <p class="lede" style="margin-top:7px">The 3-day Explorer <strong>is no longer obviously worth it</strong> now the car covers Thu–Mon. Buy singles or a Dayrider on the day.</p>
+        </div>
+        <div style="margin-top:13px"><strong style="font-size:13px">Boats</strong>
+          <div class="rows" style="margin-top:6px">
+            <div class="row"><div class="rk">Keswick</div><div class="rv"><strong>Keswick Launch</strong>, Derwentwater circular. Calls at <strong>Hawes End</strong> — the Catbells access point. From <strong>£3</strong>. Walkers' launch ~09:45</div></div>
+            <div class="row"><div class="rk">Windermere</div><div class="rv"><strong>Freedom of the Lake £35</strong>, 24 h unlimited. Red cruise Ambleside↔Bowness from £19.20</div></div>
+            <div class="row"><div class="rk">Cross-lake</div><div class="rv">Bowness → Ash Landing ✅ running (23 May – 27 Sep). This is the Hill Top route</div></div>
+            <div class="row"><div class="rk">⛔ Ullswater</div><div class="rv"><strong>The Aira Force pier is NOT operational</strong>, sailings suspended. Don't build a steamer-to-waterfall leg — walk in from Glenridding</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>🚨 Emergency</h3></div>
+      <div class="card-b">
+        <dl class="kv">
+          <dt>Emergency</dt><dd><strong>999</strong> or 112</dd>
+          <dt>Mountain Rescue</dt><dd>999 → ask for <strong>Police</strong> → then <strong>Mountain Rescue</strong></dd>
+          <dt>No signal?</dt><dd>Register for <strong>emergencySMS</strong> (text 999) <em>before</em> you go — it works where calls don't</dd>
+          <dt>Jason insurance</dt><dd>HSBC Premier annual — permanent, no action</dd>
+          <dt>Jason contact</dt><dd>Next of kin — on file, not published</dd>
+        </dl>
+        <div class="warnbar" style="margin:13px 0 0">
+          <h3>⚠️ Two profiles still read TBC</h3>
+          <p><strong>Kat's</strong> emergency contact and insurance provider are both blank in the Traveller Profile — and <strong>Liz has no profile at all</strong>. Domestic trip so the risk is low, but you're doing an 8-Wainwright ridge day. Fix the record.</p>
+        </div>
+        <div class="rows" style="margin-top:13px">
+          <div class="row"><div class="rk">Accom</div><div class="rv">3 Cambridge Villas — <strong>01539 432307</strong> · Andy</div></div>
+          <div class="row"><div class="rk">Car</div><div class="rv">Enterprise Kendal — <strong>01539 725500</strong></div></div>
+          <div class="row"><div class="rk">Taxi</div><div class="rv">Ambleside Taxi <strong>015394 68222</strong> · Windermere Station Taxi <strong>07506 715 250</strong> · Lakeside <strong>015394 44644</strong></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>🔌 Practical</h3></div>
+      <div class="card-b">
+        <dl class="kv">
+          <dt>Plug</dt><dd>Type G — you're already home</dd>
+          <dt>Driving</dt><dd>Left. <strong>Carry the physical licence</strong> and a card in the driver's own name</dd>
+          <dt>Tap water</dt><dd>Yes, everywhere</dd>
+          <dt>Sunrise/set</dt><dd>~06:00 / <strong>20:2x</strong> — a 17:30 finish still leaves a three-hour evening</dd>
+        </dl>
+        <div class="okbar" style="margin:13px 0 0">
+          <h3>🍳 Breakfast is included</h3>
+          <p>Hot buffet at 3 Cambridge Villas covers <strong>Fri, Sat, Sun and Mon</strong> — that's four meals off the peak-August dining risk. Free parking too.</p>
+        </div>
+        <div class="warnbar" style="margin:13px 0 0">
+          <h3>🚫 No takeaway in the house</h3>
+          <p>House rule at 3 Cambridge Villas. That kills the "just get a takeaway" fallback — <strong>every dinner is a walk-in</strong>. Eat early, 17:30–18:30, especially Saturday.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><h3>🍽️ Dinner shortlist</h3><span class="chip warn">no bookings</span></div>
+      <div class="card-b">
+        <p class="lede" style="margin-bottom:11px">Per standing preference, nothing is booked. <strong>Peak English school holidays in small honeypot towns</strong> — assume any sit-down after ~18:30 involves a wait or a refusal.</p>
+        <div class="pcat">Ambleside</div>
+        <div class="rows">
+          <div class="row"><div class="rk">Standout</div><div class="rv"><strong>Lucy's of Ambleside</strong> — ⚠️ walk-in in peak August will very likely fail. Go at opening or accept a wait</div></div>
+          <div class="row"><div class="rk">Reliable</div><div class="rv"><strong>Zeffirellis</strong> — restaurant, café and jazz bar, veg-focused, an institution for decades</div></div>
+          <div class="row"><div class="rk">Aspirational</div><div class="rv"><strong>Old Stamp House</strong> (Michelin) · <strong>Lake Road Kitchen</strong> — both need booking weeks ahead. Listed so the option is known</div></div>
+        </div>
+        <div class="pcat">Keswick — for the Sunday</div>
+        <div class="rows">
+          <div class="row"><div class="rk">Lunch</div><div class="rv"><strong>Bryson's of Keswick</strong> — pastries and takeaway lunch. The right call for a Catbells day</div></div>
+          <div class="row"><div class="rk">Dinner</div><div class="rv"><strong>Morrels</strong> — reliable modern British</div></div>
+        </div>
+        <div class="pcat">Bowness / Windermere</div>
+        <div class="rows">
+          <div class="row"><div class="rk">Pub</div><div class="rv"><strong>Hole in t' Wall</strong> — historic, a genuine walk-in</div></div>
+          <div class="row"><div class="rk">Chippy</div><div class="rv"><strong>Vinegar Jones</strong> — ⚠️ closes <strong>19:30</strong> weekdays, 17:30 Sunday</div></div>
+        </div>
+        <p class="lede" style="margin-top:11px">⚠️ All hours and prices unverified — check on the day.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>🎒 Your packing list</h2><span class="hint">stays on your device — never synced to the group</span></div>
+  <div class="card">
+    <div class="card-h"><span class="chip" id="packChip">0 / 0 packed</span><button class="btn sm gh" id="packReset">Reset</button></div>
+    <div class="card-b"><div id="packing"></div></div>
+  </div>
+
+  <div class="sec-h"><h2>The Lakes in five frames</h2></div>
+  <div class="gal" id="gallery"></div>
+</section>
+
+</main>
+
+<nav class="dock" id="dock">
+  <button class="dk" data-tab="board" aria-selected="true"><span class="di">🗺️</span>Board</button>
+  <button class="dk" data-tab="itin" aria-selected="false"><span class="di">📅</span>Days</button>
+  <button class="dk" data-tab="jobs" aria-selected="false"><span class="di">✅</span>Jobs</button>
+  <button class="dk" data-tab="desk" aria-selected="false"><span class="di">🗂️</span>Calls</button>
+  <button class="dk" data-tab="pack" aria-selected="false"><span class="di">🎒</span>Pack</button>
+</nav>
+
+<div class="sync" id="syncChip">💾 saved on this device</div>
+
+<footer class="foot wrap">
+  <div><strong>The Lakes</strong> · 19–24 August 2026 · Jason, Kat &amp; Liz</div>
+  <div style="margin-top:6px">Built from the Notion trip page, 18 Aug 2026. Times, fares and opening hours marked ⚠️ are unverified — <strong>check on the day, not off this board.</strong></div>
+  <div style="margin-top:6px"><button class="btn sm gh" id="btnTheme">🌗 Theme</button> <button class="btn sm gh" id="btnHelp">❔ How this works</button></div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal" id="trailModal"><div class="bd" data-close></div><div class="mb">
+  <img class="mshot" id="tmShot" alt="" style="display:none">
+  <div class="mh"><div><h3 id="tmName">—</h3><div class="chips" style="margin-top:6px"><span class="chip" id="tmTag">—</span></div></div><button class="x" data-close>&times;</button></div>
+  <div class="mc">
+    <div class="stat4" id="tmStats"></div>
+    <div style="font-size:13.5px;line-height:1.65" id="tmRoute"></div>
+    <div style="margin-top:15px"><strong style="font-size:13px">Be ready for</strong><ul style="margin:7px 0 0;padding-left:19px;font-size:13px;line-height:1.7" id="tmPrep"></ul></div>
+    <div style="margin-top:15px;font-size:13px" id="tmPark"></div>
+    <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn t" id="tmLink" target="_blank" rel="noopener">Guide</a><button class="btn" data-close>Close</button></div>
+  </div>
+</div></div>
+
+<div class="modal" id="lightbox"><div class="bd" data-close></div><div class="mb">
+  <img id="lbimg" alt=""><div class="lbnav"><button class="btn sm" id="lbPrev">‹ Prev</button><span id="lbCount">1 / 1</span><button class="btn sm" id="lbNext">Next ›</button></div>
+</div></div>
+
+<div class="modal" id="genModal"><div class="bd" data-close></div><div class="mb">
+  <div class="mh"><h3 id="gmTitle">—</h3><button class="x" data-close>&times;</button></div>
+  <div class="mc" id="gmBody"></div>
+</div></div>
+
+<script>
+"use strict";
+/* =====================================================================
+   CONFIG
+   ===================================================================== */
+const STORE_KEY   = "lakes-board-aug2026-v1";
+const PACK_KEY    = "lakes-packing-aug2026-v1";
+const REMOTE_API_URL = ""; // ← paste the Apps Script /exec URL here to turn on group sync
+const TRIP_START  = new Date("2026-08-19T18:30:00+01:00"); // Euston departure
+const TZ          = "Europe/London";
+const IMG         = "images/";
+
+const TRAVELLERS = [
+  { id:"jason", name:"Jason", colour:"#2f7fae", init:"J" },
+  { id:"kat",   name:"Kat",   colour:"#a4652a", init:"K" },
+  { id:"liz",   name:"Liz",   colour:"#7d5fae", init:"L" }
+];
+const PIECES = ["🥾","🧭","🐑","☂️","🎒","⛰️","🚂","🍰"];
+const VIBES  = ["Summit or nothing","Here for the pub","Photo stops only","Will carry the map","Chief of snacks","Wild swimmer"];
+
+/* ---------- DAYS ---------- */
+const TRIP_DAYS = [
+  { id:"d1", iso:"2026-08-19", date:"Wed 19 Aug", city:"London → Windermere",
+    sleep:"Windermere Central Hotel, Room 2", move:"Train — Euston 18:30 → Windermere 21:39",
+    bring:"Dinner bought at Euston · Two Together Railcard", note:"Travel only. Do not try to add an activity.",
+    sun:"05:55 / 20:35", temp:"17° / 12°, 70% rain" },
+  { id:"d2", iso:"2026-08-20", date:"Thu 20 Aug", city:"Windermere → Ambleside",
+    sleep:"3 Cambridge Villas, Ambleside (4 nights)", move:"🔴 Checkout 11:00 · car pickup Kendal · move to Ambleside",
+    bring:"£340 cash/card for Andy · physical licence · the card the car was booked on", note:"The over-committed day. Fix the clash before anything else.",
+    sun:"05:56 / 20:33", temp:"18° / 9°, 60% rain" },
+  { id:"d3", iso:"2026-08-21", date:"Fri 21 Aug", city:"Ambleside",
+    sleep:"3 Cambridge Villas", move:"Car available all day · walks from the door",
+    bring:"Boots · waterproof", note:"Jason works. Evening fell. Fells 70% cloud-free — the best evening of the week.",
+    sun:"05:58 / 20:31", temp:"17° / 9°, 40% rain" },
+  { id:"d4", iso:"2026-08-22", date:"Sat 22 Aug", city:"Ambleside — THE BIG ONE",
+    sleep:"3 Cambridge Villas", move:"🟢 None. Starts and ends at the front door",
+    bring:"2L water · lunch · layers · headtorch", note:"Fairfield Horseshoe. 8 Wainwrights. Eat early — dinner is a walk-in.",
+    sun:"06:00 / 20:28", temp:"18° / 8°, 20% rain" },
+  { id:"d5", iso:"2026-08-23", date:"Sun 23 Aug", city:"Keswick &amp; Derwentwater",
+    sleep:"3 Cambridge Villas", move:"Car or 555 to Keswick, then Keswick Launch",
+    bring:"Coins for parking · launch fare", note:"Deliberately lighter than Saturday. One directional sweep.",
+    sun:"06:02 / 20:26", temp:"19° / 8°, 10% rain" },
+  { id:"d6", iso:"2026-08-24", date:"Mon 24 Aug", city:"Ambleside → London",
+    sleep:"— home", move:"🔴 Checkout 10:30 · car back Kendal 17:30 · Avanti 19:26",
+    bring:"Everything in the car by 10:30", note:"Work, then the drive-and-train sequence. Leave Ambleside 16:45 at the absolute latest.",
+    sun:"06:04 / 20:24", temp:"19° / 10°, 20% rain" }
+];
+
+/* ---------- SEEDED ITINERARY ---------- */
+const SEED_PLAN = {
+  d1:[
+    {t:"17:50", ti:"🔴 Leave home", de:"20 min buffer at Euston — no security, no bag drop. Departure is 18:30, NOT 19:00.", img:"scene-train", who:["jason","kat"]},
+    {t:"~18:00", ti:"🍽️ Buy dinner at Euston", de:"Confirmed plan, not a fallback. Nothing in Windermere, Ambleside or Bowness is verified open past 22:30. Vinegar Jones shuts 19:30.", img:"scene-dinner", who:["jason","kat"]},
+    {t:"18:30", ti:"🚆 Avanti → Glasgow Central", de:"Coach B, seats 41 + 49. Booked, ref in the private copy.", img:"scene-train", who:["jason","kat"]},
+    {t:"20:14", ti:"🛑 Warrington Bank Quay — STAY ON THE TRAIN", de:"Split ticket. Do not get off. Just show the next ticket — Coach E, seats 01 + 05.", img:"scene-train", who:["jason","kat"]},
+    {t:"21:10", ti:"Oxenholme — 10 min change", de:"Northern branch 21:20. Booked and protected on the same ticket, so the connection is guaranteed.", img:"scene-train", who:["jason","kat"]},
+    {t:"21:39", ti:"🛏️ Windermere — walk to the room", de:"Windermere Central Hotel, Room 2. In town, walkable from the station — that is the entire reason for this night.", img:"scene-stay", who:["jason","kat"]}
+  ],
+  d2:[
+    {t:"09:00", ti:"💻 First work check", de:"Jason working.", img:"", who:["jason"]},
+    {t:"11:00", ti:"🔴 CLASH — checkout 11:00 vs work call 11:00–11:30", de:"Head-on collision. See the Decisions tab — this is the trip's one live blocker.", img:"", who:["jason"]},
+    {t:"12:00", ti:"🚗 Enterprise Kendal — car pickup", de:"Mintsfeet Road LA9 6NN. Prepaid £185.24. Backstop if late: 555 bus Windermere 11:02 → Kendal 11:54, then a 20–25 min walk = ~12:15 at the desk. Fifteen minutes past a prepaid booking is not a problem.", img:"scene-drive", who:["jason"]},
+    {t:"13:00", ti:"⚠️ Second catchup 13:00–14:00", de:"Not reflected anywhere in the Notion plan. This is what makes Thursday undeliverable as written.", img:"", who:["jason"]},
+    {t:"~14:30", ti:"🛏️ Check in — 3 Cambridge Villas", de:"Ambleside. Check-in 11:30–20:30. Pay the £340 balance at the desk. Free parking included.", img:"scene-stay", who:["jason","kat","liz"]},
+    {t:"17:30", ti:"🥾 Wansfell Pike", de:"FREE. 4.7 km, 450 m, 2h15, moderate with steep rocky sections. Starts behind The White Lion. The single best evening walk on this trip.", img:"scene-ambleside", who:["jason"]},
+    {t:"alt", ti:"🌧️ Jenkin Crag — the wet fallback", de:"FREE. 4 km, 1h30, easy, wooded. 60% rain today — this is the realistic call if work overruns or it's bucketing.", img:"scene-rydal", who:["jason"]},
+    {t:"day", ti:"👤 Kat — Hill Top &amp; the west shore", de:"Hill Top £17, 10:00–17:00 daily, timed entry, booking essential. Via Bowness → Ash Landing boat then ~2 miles mostly off-road. Hawkshead 2 miles on, or the 505 back.", img:"scene-hilltop", who:["kat"]}
+  ],
+  d3:[
+    {t:"11:00", ti:"💻 work call 11:00–11:30", de:"Jason working from the room.", img:"", who:["jason"]},
+    {t:"17:30", ti:"🥾 Loughrigg Fell", de:"FREE. Full circuit 10 km, 335 m, 3–4 h. ⚠️ Too long for a 17:30 start — do the direct out-and-back to the summit. Starts in Ambleside centre via Rothay Park.", img:"scene-rydal", who:["jason"]},
+    {t:"alt", ti:"Whichever of Wansfell / Jenkin Crag / Stock Ghyll you skipped", de:"Stock Ghyll Force is 30 min round trip from Market Place. ⚠️ Stepped and slippery when wet.", img:"scene-ambleside", who:["jason"]},
+    {t:"20:00", ti:"🌅 Waterhead &amp; Borrans Road lakeshore", de:"Flat, 20 min. The light on Windermere at 20:00 is the best of the day.", img:"scene-windermere", who:["jason","kat","liz"]},
+    {t:"day", ti:"👤 Kat — Grasmere &amp; the Wordsworth corridor", de:"599 open top or 555, ~20 min. Gingerbread Shop open every day of the year bar four. Rydal Mount 10:30–16:00, last entry 15:00. Rydal Water is flat and walkable back to the bus. All four sights sit on one 2-mile corridor — one stop, not four.", img:"scene-grasmere", who:["kat"]}
+  ],
+  d4:[
+    {t:"whenever", ti:"🔴 FAIRFIELD HORSESHOE", de:"LOCKED 18 Aug. 18.4 km / 11.4 mi, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical — no scrambling, no exposure. Starts and ends in Ambleside, so zero transport dependency and no start-time pressure.", img:"scene-langdale", who:["jason","kat","liz"]},
+    {t:"~17:30", ti:"🍽️ Eat EARLY", de:"No takeaway allowed in the house and it's peak August. 17:30–18:30 or you're waiting. This is the night that bites.", img:"scene-dinner", who:["jason","kat","liz"]},
+    {t:"swap", ti:"⚑ Helvellyn via Striding Edge — live-day swap only", de:"Superseded but retained. Grade 1 scramble, exposed. Needs the 08:50 bus from Windermere and everyone's agreement. Weather is now viable (20% rain, gusts 13 mph) — the constraint is the early start, not the sky.", img:"scene-helvellyn", who:["jason"]},
+    {t:"flex", ti:"🌧️ Wet flex — Langdale (NOT needed)", de:"Forecast says 20% and light wind, so this stays parked. 516 to Dungeon Ghyll 25–30 min, last back ~22:26. Langdale Pikes 7.7 km, 760 m, 3h30–5 h.", img:"scene-dungeonghyll", who:[]}
+  ],
+  d5:[
+    {t:"09:00", ti:"🚌 Ambleside → Keswick", de:"555, ~47 min. Or drive — you have the car. Last 555 back from Keswick ~23:01, so there is no pressure at all on the return.", img:"scene-keswick", who:["jason","kat","liz"]},
+    {t:"09:45", ti:"⛴️ Keswick Launch → Hawes End", de:"From £3. There is a dedicated walkers' launch ~09:45. The only car-free route to Catbells — and better than driving anyway.", img:"scene-derwentwater", who:["jason","kat","liz"]},
+    {t:"10:15", ti:"🥾 Catbells", de:"FREE. ~6 km circular, 445 m, 2–2.5 h, moderate with a short scramble near the top. The best scenery-to-effort ratio in the Lake District.", img:"scene-catbells", who:["jason","kat","liz"]},
+    {t:"13:00", ti:"🚶 Derwentwater lakeshore + launch back", de:"The circular calls at several jetties — walk one leg and sail the other.", img:"scene-borrowdale", who:["jason","kat","liz"]},
+    {t:"15:00", ti:"☕ Keswick town", de:"Theatre by the Lake grounds, Friar's Crag, market square. Lunch at Bryson's of Keswick.", img:"scene-keswick", who:["jason","kat","liz"]},
+    {t:"17:00", ti:"🗿 Castlerigg Stone Circle", de:"FREE. Neolithic circle ringed by mountains, ~30 min walk from the centre. Good in light rain. ✂️ First thing to cut — the light on Derwentwater is worth more.", img:"scene-castlerigg", who:["jason","kat","liz"]}
+  ],
+  d6:[
+    {t:"10:30", ti:"🔴 Checkout — 10:30, not 10:00", de:"Pay the £340 balance. Bags straight into the car. Stasher is no longer needed.", img:"scene-stay", who:["jason","kat","liz"]},
+    {t:"10:30", ti:"💻 Work until 16:30", de:"🔴 The one unsolved gap: the room is gone for six of seven working hours. Primary — ask at breakfast to use the guest lounge. Fallbacks: Force Café on Stockghyll Lane, or Ambleside Library (Mondays 10:00–17:00). Calls: work call 11:00–11:30, second call 13:00–14:00.", img:"", who:["jason"]},
+    {t:"16:30", ti:"🚗 Drive Ambleside → Kendal", de:"A591, 13 mi, ~30 min. Leave by 16:45 at the absolute latest.", img:"scene-drive", who:["jason","kat","liz"]},
+    {t:"17:30", ti:"🔑 Car back — Enterprise Kendal", de:"Handed back in person. Branch closes 18:00 with no key drop. Booked return is 17:30, so there is 30 min of slack.", img:"scene-drive", who:["jason"]},
+    {t:"17:45", ti:"🚕 Taxi → Oxenholme", de:"~3 mi, ~10 min. At Oxenholme ~18:00 against a 19:26 departure — 1h26 of slack. Eat in Kendal rather than wait on a platform.", img:"scene-train", who:["jason","kat","liz"]},
+    {t:"19:26", ti:"🚆 Avanti → London Euston 22:27", de:"Coach F, seats 62 + 66. Non-refundable Advance — this is the leg that actually binds the whole day.", img:"scene-train", who:["jason","kat"]},
+    {t:"day", ti:"👤 Kat — Blackwell, or come along", de:"Blackwell, The Arts and Crafts House. £12, open daily 10:00–17:00, no Monday closure. The finest Arts and Crafts interior in England and most visitors miss it. Get dropped there and collected ~16:15 on the way through to Kendal.", img:"scene-windermere", who:["kat"]}
+  ]
+};
+
+/* ---------- GROUP JOBS ---------- */
+const GROUP_TASKS = [
+  { id:"t-liz", icon:"👤", title:"Liz — rail seat and a bed", blocking:true, room:"r-liz",
+    sub:"<strong>Nothing currently booked covers Liz.</strong> Rail is 2 seats on a Two Together Railcard (which is 2-person by definition), the Windermere room is a 1-bed private room for 2 adults, and 3 Cambridge Villas is a Superior King for 2. The train is tomorrow." },
+  { id:"t-thu", icon:"🔴", title:"Fix Thursday — it is not executable as written", blocking:true, room:"r-thu",
+    sub:"11:00 checkout · 11:00–11:30 work call · 12:00 car pickup 20 min away · 13:00–14:00 the 13:00 catchup. Pick one fix and tell Andy the real arrival time." },
+  { id:"t-andy", icon:"✉️", title:"Reply to Andy with the actual Thursday arrival time", blocking:true,
+    sub:"The page still assumes ~12:30, which no longer holds. 01539 432307. Check-in runs 11:30–20:30." },
+  { id:"t-coins", icon:"🪙", title:"Draw ~£20 in £1 coins", blocking:true,
+    sub:"LDNPA confirms card payment fails at car parks with no internet. New Dungeon Ghyll has no phone-pay at all. Do this at the station tomorrow if nowhere else." },
+  { id:"t-apps", icon:"📱", title:"Install RingGo, PayByPhone and JustPark", blocking:false,
+    sub:"The Lakes use all three depending on the car park. Also grab the Stagecoach Bus app." },
+  { id:"t-offline", icon:"🗺️", title:"Download offline maps — Google + OS OL5, OL6, OL7", blocking:false,
+    sub:"Do it on wifi before you leave. The valleys are documented signal blackspots." },
+  { id:"t-monday", icon:"💻", title:"Monday desk — ask at breakfast", blocking:false, room:"r-mon",
+    sub:"Checkout 10:30, work to 16:30. No advance email needed — ask about the guest lounge at Monday breakfast. Fallbacks: Force Café, Ambleside Library." },
+  { id:"t-taxi", icon:"🚕", title:"Monday taxi — Enterprise Kendal → Oxenholme, ~17:45", blocking:false,
+    sub:"Downgraded from blocker: you land at Oxenholme ~18:00 against a 19:26 train, so 1h26 of slack. Uber Local Cab or a Kendal firm will do. Only ~3 miles." },
+  { id:"t-hilltop", icon:"🎟️", title:"Book Hill Top timed entry — if Kat wants it", blocking:false,
+    sub:"£17, timed entry, essential in August. The only timed booking on the whole trip." },
+  { id:"t-profiles", icon:"🚨", title:"Fix the traveller profiles", blocking:false,
+    sub:"Kat's emergency contact and insurance both read TBC. Liz has no profile at all. You're doing an 8-Wainwright ridge day — fix the record." }
+];
+
+/* ---------- DECISION ROOMS ---------- */
+const DESK_ROOMS = [
+  { id:"r-liz", icon:"👤", title:"Liz — how does she travel and where does she sleep?", note:"Blocking. The train is tomorrow evening.",
+    options:[
+      { id:"liz-rail-own", t:"Liz books her own Euston → Oxenholme single", m:"Walk-up Advance singles for tomorrow will be dear, but they exist. She'd need the 18:30 or an adjacent Avanti, then the 21:20 Northern branch to Windermere. <strong>Does not touch the existing 2-person booking or the Two Together Railcard.</strong>", tags:["cleanest","costs £"] },
+      { id:"liz-drive", t:"Liz drives up and meets you Thursday", m:"Sidesteps the rail problem entirely and gives the group a second car — which fixes Thursday's Kendal pickup as a bonus. ~5–6 h on the M6. Free parking at 3 Cambridge Villas is confirmed.", tags:["fixes Thursday too"] },
+      { id:"liz-room", t:"Add a second room at 3 Cambridge Villas", m:"Call Andy on <strong>01539 432307</strong>. Peak August, 4 nights, one night's notice — availability is genuinely doubtful. Ask tonight, not tomorrow.", tags:["call tonight","⚠️ peak season"] },
+      { id:"liz-partial", t:"Liz joins for the weekend only", m:"Sat + Sun are the two dry days and the two best days — Fairfield and Catbells. Arrive Friday night, leave Monday. Smaller booking problem, and she gets the best of the trip.", tags:["smallest fix"] }
+    ]},
+  { id:"r-thu", icon:"🔴", title:"Thursday 20 Aug — pick the fix", note:"Four commitments, one impossible hour. Enterprise is open to 18:00 and the car is prepaid, so time is the flexible part.",
+    options:[
+      { id:"thu-late", t:"Take the work call from the Windermere room, check out late", m:"Ask the Airbnb host for checkout at ~12:00. Keeps you on known-good wifi and power through the call. Then bus or taxi to Kendal for a mid-afternoon pickup.", tags:["known-good wifi"],
+        scores:[["Call quality",9,"Own room, own wifi"],["Cost",9,"Free if granted"],["Certainty",5,"Host may refuse"],["Knock-on",8,"Nothing else moves"]], verdict:"Best for keeping the call clean — if the host says yes." },
+      { id:"thu-push", t:"Push the car pickup to ~15:00", m:"Enterprise is open to 18:00 and it's prepaid, so a later pickup costs nothing. Bags to Stasher or 3 Cambridge Villas (they hold bags before check-in), do both calls from a café, collect the car after.", tags:["free","most slack"],
+        scores:[["Call quality",6,"Café wifi is a gamble"],["Cost",9,"Zero"],["Certainty",9,"Fully in your control"],["Knock-on",7,"Later Ambleside arrival"]], verdict:"Best for certainty — nothing depends on anyone else saying yes." },
+      { id:"thu-move", t:"Move the 13:00 catchup off Thursday", m:"The 13:00–14:00 catchup is the only item that isn't anchored to a booking or a checkout time. Moving it opens the whole afternoon.", tags:["one message"],
+        scores:[["Call quality",8,"Do it from Ambleside later"],["Cost",10,"Free"],["Certainty",7,"Depends on them"],["Knock-on",9,"Unblocks everything"]], verdict:"Best value for one message sent tonight." },
+      { id:"thu-bus", t:"Backstop — the 555 bus, accept ~12:15 at the desk", m:"Windermere Rail Station <strong>11:02 → Kendal Bus Station 11:54</strong>, then a 20–25 min walk to Mintsfeet Road. Or 11:32 → 12:24. Fifteen minutes past a prepaid 12:00 booking is not a problem.", tags:["verified 18 Aug","no booking needed"] }
+    ]},
+  { id:"r-mon", icon:"💻", title:"Monday desk — 10:30 checkout, work to 16:30", note:"Six of seven working hours with no room. Ask at breakfast; no advance email needed.",
+    options:[
+      { id:"mon-lounge", t:"Guest lounge at 3 Cambridge Villas", m:"Primary. Ask Andy at Monday breakfast. ⚠️ No guest lounge is mentioned anywhere on their site, so this may simply not exist.", tags:["ask at breakfast"] },
+      { id:"mon-force", t:"Force Café, Stockghyll Lane", m:"The only café in the region advertising a guaranteed desk and reliable wifi — \"no wifi dramas\". Previously researched as Mon–Thu 09:30–17:00. ⚠️ Hours could not be re-verified — the site blocks automated access.", tags:["few min walk","⚠️ hours"] },
+      { id:"mon-lib", t:"Ambleside Library", m:"Open Mondays <strong>10:00–17:00</strong> — which is exactly your window. Free. ⚠️ Suitability for back-to-back video calls is unverified.", tags:["open Mon","free"] }
+    ]},
+  { id:"r-sat", icon:"⛰️", title:"Saturday — Fairfield or Helvellyn", note:"Already decided. Kept so nobody reopens it on the walk in.",
+    locked:"sat-fair",
+    options:[
+      { id:"sat-fair", t:"Fairfield Horseshoe", m:"18.4 km, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical. <strong>Starts and ends at the front door</strong> — no bus, no start-time pressure, and weather degrades it rather than cancelling it.", tags:["LOCKED 18 Aug","zero transport risk"] },
+      { id:"sat-helv", t:"Helvellyn via Striding Edge", m:"Grade 1 scramble, exposed. Now weather-viable for the first time (20% rain, gusts 13 mph) — but a 09:50 start on a 6–7 h hard scramble against a 19:58 last bus leaves margin only if nothing goes wrong, on a 508 timetable that is still unverified.", tags:["live-day swap only","⚠️ 508 unverified"] }
+    ]},
+  { id:"r-dinner", icon:"🍽️", title:"Dinners — no bookings, by preference", note:"Peak school holidays. Eat early or wait. No takeaway allowed in the house.",
+    options:[
+      { id:"din-lucy", t:"Lucy's of Ambleside", m:"The standout. ⚠️ Walk-in in peak August will very likely fail — go at opening or accept a wait.", tags:["standout"] },
+      { id:"din-zeff", t:"Zeffirellis, Ambleside", m:"Restaurant, café and jazz bar. Vegetarian-focused, an institution for decades. The realistic walk-in.", tags:["most likely to seat you"] },
+      { id:"din-morrels", t:"Morrels, Keswick — for Sunday", m:"Reliable modern British. Pair with Bryson's for the Catbells-day lunch.", tags:["Sunday"] }
+    ]}
+];
+
+/* ---------- IDEAS ---------- */
+const IDEAS = [
+  { id:"i-hilltop", t:"Hill Top", p:"Near Sawrey", w:"Beatrix Potter's farmhouse, left exactly as she kept it. £17, timed entry, booking essential.", img:"scene-hilltop", e:"🏡" },
+  { id:"i-grasmere", t:"Grasmere &amp; gingerbread", p:"Grasmere", w:"Open every day of the year bar four. Genuinely reliable in a region where nothing else is.", img:"scene-grasmere", e:"🍪" },
+  { id:"i-rydal", t:"Rydal Mount", p:"Rydal", w:"Wordsworth's home. 10:30–16:00, last entry 15:00. ⚠️ Price unverified.", img:"scene-rydal", e:"🏛️" },
+  { id:"i-blackwell", t:"Blackwell Arts &amp; Crafts House", p:"Bowness", w:"The finest Arts and Crafts interior in England and most visitors miss it. £12, open daily, no Monday closure.", img:"scene-windermere", e:"🎨" },
+  { id:"i-freedom", t:"Freedom of the Lake", p:"Windermere", w:"£35, 24 h unlimited hop-on-hop-off. Turns the lake into a transport network — and it's enjoyable in weather that ruins a fell.", img:"scene-windermere", e:"⛴️" },
+  { id:"i-tarnhows", t:"Tarn Hows", p:"nr Hawkshead", w:"Easy, surfaced, one of the most photographed spots in the Lakes. ⚠️ Cross Lakes Shuttle discontinued for 2026 — 505 + ~1 mi walk is now the only route.", img:"scene-tarnhows", e:"🌲" },
+  { id:"i-coniston", t:"Old Man of Coniston", p:"Coniston", w:"\"The easiest fell in the difficult category\" — a summit without a scramble. 10.6 km, 718 m. ⚠️ Last bus back may be 15:35.", img:"scene-coniston", e:"⛰️" },
+  { id:"i-langdale", t:"Langdale Pikes", p:"Great Langdale", w:"The most dramatic valley in the Lakes. 7.7 km, 760 m. Best late bus in the region — 516 back at ~22:26.", img:"scene-langdale", e:"🏔️" },
+  { id:"i-stockghyll", t:"Stock Ghyll Force", p:"Ambleside", w:"Waterfall straight out of town, 30 minutes round trip. ⚠️ Stepped and slippery when wet.", img:"scene-ambleside", e:"💧" },
+  { id:"i-castlerigg", t:"Castlerigg Stone Circle", p:"Keswick", w:"Neolithic circle ringed by mountains. FREE, ~30 min walk from town. Good in light rain.", img:"scene-castlerigg", e:"🗿" },
+  { id:"i-hawkshead", t:"Hawkshead village", p:"Hawkshead", w:"Tiny, car-free, whitewashed cobbled lanes. 505 from Ambleside, ~20 min.", img:"scene-hawkshead", e:"🏘️" },
+  { id:"i-honister", t:"Honister &amp; Buttermere", p:"Borrowdale", w:"Underground slate tour and the most rugged valley in the Lakes. ❌ Ruled out car-free — but you have a car now. Worth reopening.", img:"scene-honister", e:"⛏️" },
+  { id:"i-aira", t:"Aira Force", p:"Ullswater", w:"Waterfall in ancient woodland. ⛔ The Ullswater Steamers pier at Aira Force is NOT operational — walk in from Glenridding only.", img:"scene-airaforce", e:"🌊" },
+  { id:"i-puzzling", t:"The Puzzling Place", p:"Keswick", w:"Indoor and cheap. The Sunday wet-weather swap, with the Derwent Pencil Museum.", img:"scene-keswick", e:"🎪" }
+];
+
+/* ---------- TRAIL INFO ---------- */
+const TRAIL_INFO = [
+  { match:/fairfield/i, name:"Fairfield Horseshoe", tag:"Hard · non-technical",
+    stats:[["Distance","18.4 km"],["Ascent","928 m"],["Time","6–8 h"],["Format","Ridge circuit"]],
+    route:"Out of Ambleside via Rydal or Low Sweden Bridge, up onto the eastern arm over Low Pike, High Pike and Dove Crag, around the head of the horseshoe at Fairfield itself, then back down the western arm over Great Rigg, Heron Pike and Nab Scar. Eight Wainwrights in one loop. It starts and finishes in the town, so there is no transport to catch at either end and no fixed start time.",
+    prep:["Hard but entirely non-technical — no scrambling and no exposure. Fitness is the constraint, not nerve.","In low cloud this becomes navigation on a broad, featureless ridge. Carry OL7 and a compass, not just a phone.","Almost no shelter and no water on the tops. Carry 2 L each and all your food.","Gusts forecast at 13 mph and 20% rain — this is about as good as an August Saturday gets.","Budget the full 8 hours. Sunset is 20:28, so even a late start is safe on daylight."],
+    parking:"None needed — it starts and ends at the front door in Ambleside. This is the whole reason it beat Helvellyn.",
+    link:"https://www.google.com/maps/search/?api=1&query=Fairfield+Horseshoe+Ambleside", linkLabel:"Open in Maps" },
+  { match:/catbells/i, name:"Catbells", tag:"Moderate · short scramble",
+    stats:[["Distance","~6 km"],["Ascent","445 m"],["Time","2–2.5 h"],["Format","Circular"]],
+    route:"From the Hawes End jetty the path rises straight onto the northern nose of the ridge, with one short rocky step that needs hands near the top. The summit gives the full length of Derwentwater on one side and the Newlands valley on the other. Descend south and pick up the lakeshore path back to a jetty.",
+    prep:["The short scramble near the top is greasy when wet — Sunday is forecast at 10% rain, so you should be fine.","Time the launch both ways. The walkers' launch is around 09:45 and the circular calls at several jetties.","Best scenery-to-effort ratio in the Lake District — this is a genuinely easy day after Saturday.","Busy in August. The early launch is worth it for more than just the timetable."],
+    parking:"Hawes End has very limited roadside parking that fills early. The Keswick Launch is the better route anyway — and the only car-free one.",
+    link:"https://www.google.com/maps/search/?api=1&query=Catbells+Keswick", linkLabel:"Open in Maps" },
+  { match:/wansfell/i, name:"Wansfell Pike", tag:"Moderate · steep",
+    stats:[["Distance","4.7 km"],["Ascent","450 m"],["Time","2h15"],["Format","Out & back"]],
+    route:"Starts behind The White Lion in Ambleside and climbs steadily up a stepped, rocky path to a proper summit looking straight down the length of Windermere. Short, sharp and entirely doable after a working day — leave by 17:30 and you are down with an hour of daylight spare.",
+    prep:["Steep rocky sections throughout — this is a real climb, not a stroll.","Thursday is the wet day at 60% rain. If it is bucketing, Jenkin Crag is the honest fallback.","Sunset 20:33. A 17:30 start has plenty of margin.","Head torch in the bag regardless."],
+    parking:"None needed — starts in Ambleside behind The White Lion.",
+    link:"https://www.google.com/maps/search/?api=1&query=Wansfell+Pike+Ambleside", linkLabel:"Open in Maps" },
+  { match:/loughrigg/i, name:"Loughrigg Fell", tag:"Easy–moderate",
+    stats:[["Distance","10 km full"],["Ascent","335 m"],["Time","3–4 h"],["Format","Circuit"]],
+    route:"From Ambleside centre through Rothay Park and up onto a low, knobbly fell with a disproportionately good view over Windermere, Rydal Water and Grasmere. The full circuit takes in Loughrigg Terrace and the caves. A genuine fell summit inside a half day, straight from the town centre.",
+    prep:["⚠️ The full circuit is too long for a 17:30 start — do the direct out-and-back to the summit instead.","Take the full loop only if you finish work by 16:30.","Friday is the best evening of the week: fells 70% cloud-free, wind under 10 mph.","The summit plateau is confusingly lumpy in mist — more than one path looks like the right one."],
+    parking:"None needed — starts in Ambleside via Rothay Park.",
+    link:"https://www.google.com/maps/search/?api=1&query=Loughrigg+Fell+Ambleside", linkLabel:"Open in Maps" },
+  { match:/langdale|dungeon ghyll/i, name:"Langdale Pikes", tag:"Medium · steep ground",
+    stats:[["Distance","7.7 km"],["Ascent","760 m"],["Time","3h30–5 h"],["Format","Circuit"]],
+    route:"From New Dungeon Ghyll the path climbs hard beside Stickle Ghyll to Stickle Tarn, sat beneath the wall of Pavey Ark, then on to Harrison Stickle and Pike o'Stickle before dropping back into the valley. Shorter and lower than Fairfield, and the valley is spectacular even in rain.",
+    prep:["Steep, rocky and relentless from the valley floor — 760 m in a short distance.","🪙 New Dungeon Ghyll has NO phone-pay for parking. The signal is dead. Bring coins.","The 516 runs back to Ambleside until ~22:26 — the best late bus in the region, so there is no time pressure at all.","Parked as the wet-weather flex, and the forecast means you probably won't need it."],
+    parking:"New Dungeon Ghyll (NT) — <strong>coins only, no phone-pay, no signal</strong>. Fills by mid-morning in August.",
+    link:"https://www.google.com/maps/search/?api=1&query=New+Dungeon+Ghyll+Great+Langdale", linkLabel:"Open in Maps" },
+  { match:/helvellyn|striding/i, name:"Helvellyn via Striding Edge", tag:"⚠️ Grade 1 scramble · exposed",
+    stats:[["Distance","~9 km"],["Ascent","~1,000 m"],["Time","6–7 h"],["Format","Ridge scramble"]],
+    route:"From Glenridding up to the Hole-in-the-Wall, then along Striding Edge — a genuinely narrow, exposed arête with big drops either side — to the final chimney and the summit plateau. Down via Swirral Edge or the Red Tarn path. The classic English ridge scramble.",
+    prep:["Genuinely dangerous in wind, wet or low cloud. People die here every year.","The arithmetic is the real problem: 09:50 arrival, 6–7 h hard scramble, 19:58 last bus. Margin only if nothing goes wrong.","⚠️ The 508 summer 2026 timetable could not be verified — confirm in the Stagecoach app before committing.","Needs a 08:50 bus from Windermere, which means leaving Ambleside ~08:30.","Superseded by Fairfield on 18 Aug. Live-day swap only, and only with everyone's agreement."],
+    parking:"Glenridding village car park if driving — fills very early in August.",
+    link:"https://www.google.com/maps/search/?api=1&query=Striding+Edge+Helvellyn", linkLabel:"Open in Maps" },
+  { match:/jenkin crag/i, name:"Jenkin Crag", tag:"Easy · wooded",
+    stats:[["Distance","4 km"],["Ascent","~180 m"],["Time","1h30"],["Format","Out & back"]],
+    route:"An easy wooded walk from Ambleside centre out through Skelghyll Wood to a rocky viewpoint looking down over Windermere. Gentle, sheltered and guaranteed to get you down in daylight.",
+    prep:["This is the Thursday fallback — 60% rain and it is sheltered under trees most of the way.","Guaranteed down in daylight even with a late start after work.","Roots and mud when wet. Boots, not trainers.","Much shorter than Wansfell but the viewpoint is genuinely good."],
+    parking:"None needed — starts in Ambleside centre.",
+    link:"https://www.google.com/maps/search/?api=1&query=Jenkin+Crag+Ambleside", linkLabel:"Open in Maps" },
+  { match:/stock ghyll/i, name:"Stock Ghyll Force", tag:"Very easy · 30 min",
+    stats:[["Distance","~1.5 km"],["Ascent","~70 m"],["Time","30 min"],["Format","Loop"]],
+    route:"A short circuit up Stock Ghyll Lane from Market Place into the wooded gorge, where a 70 ft waterfall drops through the trees. Railed viewing platforms. The easiest possible way to see something genuinely good.",
+    prep:["⚠️ Stepped and slippery when wet — the one real hazard on an otherwise trivial walk.","Perfect filler for a wet evening or a spare half hour.","Free, and two minutes from the middle of Ambleside."],
+    parking:"None needed — from Market Place, Ambleside.",
+    link:"https://www.google.com/maps/search/?api=1&query=Stock+Ghyll+Force+Ambleside", linkLabel:"Open in Maps" }
+];
+
+/* ---------- PACKING ---------- */
+const PACKING = [
+  ["On the fells", ["Walking boots — worn in, not new","Waterproof jacket (proper shell)","Waterproof over-trousers","Fleece or midlayer","Hat + light gloves — the tops are 8° at night","Daypack, 20–30 L","2 L water each for Saturday","Blister plasters + tape","Head torch","Suncream + sunglasses"]],
+  ["Navigation", ["OS OL5, OL6, OL7 — offline on the phone","Paper map + compass for Fairfield","Offline Google Maps downloaded","Power bank (fully charged)","Register for emergencySMS (text 999)"]],
+  ["Work days", ["Laptop + charger","Headphones with a decent mic","Phone charger + spare cable","Anything needed for the Thu/Fri/Mon calls"]],
+  ["Documents & money", ["🔴 Two Together Railcard — £70.60 depends on it","Physical driving licence (Jason)","The card the car was booked on","~£20 in £1 coins for car parks","£340 for Andy at check-in"]],
+  ["Apps before you leave", ["Stagecoach Bus","RingGo","PayByPhone","JustPark"]],
+  ["Nice to have", ["Swimming kit — the tarns are fair game","Dry bag for the pack","Midge repellent","Flask for the Saturday summit"]]
+];
+
+const GALLERY = [
+  {img:"scene-derwentwater", e:"🏞️", cap:"Derwentwater from Catbells"},
+  {img:"scene-langdale", e:"🏔️", cap:"The Langdale Pikes"},
+  {img:"scene-buttermere", e:"🌲", cap:"Buttermere"},
+  {img:"scene-herdwick", e:"🐑", cap:"A Herdwick"},
+  {img:"scene-wastwater", e:"🗻", cap:"Wastwater"},
+  {img:"scene-keswick", e:"🏘️", cap:"Keswick"}
+];
+
+/* =====================================================================
+   STATE
+   ===================================================================== */
+const DEFAULT_STATE = {
+  v:1, plan:{}, dayMeta:{}, jobs:{}, votes:{}, desk:{}, crew:{}, pulse:[], pulseSeen:0
+};
+
+/* Safe storage. Private mode, file:// quirks and sandboxed frames all throw on
+   localStorage — without this the whole board dies at boot instead of just
+   losing persistence. Falls back to an in-memory shim. */
+const MEM = {};
+const LS = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return k in MEM ? MEM[k] : null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){ MEM[k]=v; } },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){ delete MEM[k]; } },
+  ok(){ try{ localStorage.setItem("__t","1"); localStorage.removeItem("__t"); return true; }catch(e){ return false; } }
+};
+const clone = o => (typeof structuredClone==="function") ? structuredClone(o) : JSON.parse(JSON.stringify(o));
+
+let S = load();
+let ME = LS.get(STORE_KEY+"-me") || "jason";
+
+function load(){
+  try{
+    const raw = LS.get(STORE_KEY);
+    if(!raw) return seed(clone(DEFAULT_STATE));
+    const s = JSON.parse(raw);
+    return seed(Object.assign(clone(DEFAULT_STATE), s));
+  }catch(e){ return seed(clone(DEFAULT_STATE)); }
+}
+function seed(s){
+  // idempotent itinerary migration v1
+  TRIP_DAYS.forEach(d=>{
+    if(!s.plan[d.id]) s.plan[d.id] = SEED_PLAN[d.id].map((x,i)=>Object.assign({id:d.id+"-"+i},x));
+    if(!s.dayMeta[d.id]) s.dayMeta[d.id] = {dropped:false, note:""};
+  });
+  DESK_ROOMS.forEach(r=>{
+    if(!s.desk[r.id]) s.desk[r.id] = {owner:null, locked:r.locked||null, votes:{}};
+    if(r.locked && s.desk[r.id].locked===undefined) s.desk[r.id].locked = r.locked;
+  });
+  return s;
+}
+function save(){
+  try{ LS.set(STORE_KEY, JSON.stringify(S)); }catch(e){}
+  const c=document.getElementById("syncChip");
+  c.textContent = REMOTE_API_URL ? "☁️ synced" : "💾 saved on this device";
+  c.style.opacity=".55";
+  push();
+}
+function logPulse(txt){
+  S.pulse.unshift({who:ME, txt, at:Date.now()});
+  S.pulse = S.pulse.slice(0,40);
+}
+function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms||12);}catch(e){} }
+const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const who = id => TRAVELLERS.find(t=>t.id===id) || {name:id,colour:"#888",init:"?"};
+
+/* remote sync (whole-state blob, last-write-wins merge) */
+async function push(){
+  if(!REMOTE_API_URL) return;
+  try{ await fetch(REMOTE_API_URL,{method:"POST",body:JSON.stringify({key:STORE_KEY,state:S}),headers:{"Content-Type":"text/plain"}}); }catch(e){}
+}
+async function pull(){
+  if(!REMOTE_API_URL) return;
+  try{
+    const r = await fetch(REMOTE_API_URL+"?key="+encodeURIComponent(STORE_KEY));
+    const j = await r.json();
+    if(j && j.state){ S = seed(Object.assign(structuredClone(DEFAULT_STATE), j.state)); renderAll(); }
+  }catch(e){}
+}
+
+/* =====================================================================
+   IMAGES — graceful fallback to emoji
+   ===================================================================== */
+function shot(name, emoji, cls){
+  if(!name) return `<div class="${cls||""}">${emoji||"📍"}</div>`;
+  return `<div class="${cls||""}">${emoji||"📍"}<img src="${IMG}${name}.jpg" alt="" loading="lazy" style="position:absolute;inset:0" onerror="this.remove()"></div>`;
+}
+
+/* =====================================================================
+   RENDER — BOARD
+   ===================================================================== */
+function renderBlocker(){
+  const open = GROUP_TASKS.filter(t=>t.blocking && !S.jobs[t.id]);
+  const el = document.getElementById("blockerSlot");
+  if(!open.length){ el.innerHTML = `<div class="okbar"><h3>✅ No blockers left</h3><p style="margin:6px 0 0;font-size:13px;color:var(--tx-2)">Everything that had to land before the train has landed. Go and enjoy it.</p></div>`; return; }
+  el.innerHTML = `<div class="warnbar">
+    <h3>🚨 ${open.length} thing${open.length>1?"s":""} still blocking</h3>
+    <p>${open.map(t=>"<strong>"+t.title+"</strong>").join(" &nbsp;·&nbsp; ")}</p>
+    <div style="margin-top:10px"><button class="btn sm p" data-goto="jobs">Open jobs →</button></div>
+  </div>`;
+}
+function renderTrack(){
+  const el = document.getElementById("track");
+  let firstOpen = GROUP_TASKS.findIndex(t=>!S.jobs[t.id]);
+  if(firstOpen<0) firstOpen = GROUP_TASKS.length;
+  el.innerHTML = GROUP_TASKS.map((t,i)=>{
+    const done = !!S.jobs[t.id];
+    const toks = (i===firstOpen) ? TRAVELLERS.map(p=>`<span class="tok" style="background:${p.colour}" title="${p.name}">${p.init}</span>`).join("") : "";
+    return `<div class="stop ${done?"done":""} ${i===firstOpen?"now":""}">
+      <div class="bead">${done?"✓":t.icon}</div>
+      <div class="nm">${t.title.replace(/ —.*$/,"")}</div>
+      <div class="toks">${toks}</div>
+    </div>`;
+  }).join("");
+  const done = GROUP_TASKS.filter(t=>S.jobs[t.id]).length;
+  document.getElementById("trackChip").textContent = `${done} / ${GROUP_TASKS.length} done`;
+  const pct = Math.round(done/GROUP_TASKS.length*100);
+  document.getElementById("ringArc").style.strokeDashoffset = String(195 - 195*pct/100);
+  document.getElementById("ringPct").textContent = pct+"%";
+  document.getElementById("ringSub").textContent = `${done} of ${GROUP_TASKS.length} done`;
+  document.getElementById("hubJobs").textContent = `${GROUP_TASKS.length-done} still open`;
+  document.getElementById("tabJobsN").textContent = String(GROUP_TASKS.length-done);
+  document.getElementById("jobsChip").textContent = `${done} / ${GROUP_TASKS.length} done`;
+}
+function renderPulse(){
+  const el = document.getElementById("pulse");
+  if(!S.pulse.length){ el.innerHTML = `<p class="lede" style="padding:14px 0">Nothing yet. Tick a job or cast a vote and it shows up here.</p>`; return; }
+  el.innerHTML = S.pulse.map(p=>{
+    const w = who(p.who);
+    const mins = Math.floor((Date.now()-p.at)/60000);
+    const tm = mins<1?"just now":mins<60?mins+"m ago":Math.floor(mins/60)+"h ago";
+    return `<div class="pl"><span class="av" style="background:${w.colour}">${w.init}</span><span style="flex:1"><strong>${w.name}</strong> ${esc(p.txt)}</span><span class="tm">${tm}</span></div>`;
+  }).join("");
+}
+function renderCrew(){
+  document.getElementById("crew").innerHTML = TRAVELLERS.map(t=>{
+    const c = S.crew[t.id] || {};
+    return `<div class="mate">
+      <div class="top"><div class="avx" style="background:${t.colour}">${t.init}</div>
+        <div><div class="nm2">${t.name}${t.id===ME?' <span class="chip tarn" style="font-size:10px">you</span>':""}</div>
+        <div class="rl">${c.vibe||"no vibe picked"}</div></div></div>
+      <div class="pick">${PIECES.map(p=>`<button class="pk2 ${c.piece===p?"on":""}" data-piece="${t.id}|${p}">${p}</button>`).join("")}</div>
+      <div style="margin-top:9px"><select class="btn sm" style="width:100%" data-vibe="${t.id}">
+        <option value="">— pick a vibe —</option>
+        ${VIBES.map(v=>`<option ${c.vibe===v?"selected":""}>${v}</option>`).join("")}
+      </select></div>
+      ${t.id!==ME?`<button class="btn sm gh" style="margin-top:8px;width:100%" data-me="${t.id}">This is me</button>`:""}
+    </div>`;
+  }).join("");
+}
+
+/* =====================================================================
+   RENDER — ITINERARY
+   ===================================================================== */
+let curDay = TRIP_DAYS[0].id;
+function renderDayNav(){
+  document.getElementById("daynav").innerHTML = TRIP_DAYS.map(d=>{
+    const m = S.dayMeta[d.id]||{};
+    return `<button class="dbtn ${m.dropped?"dropped":""}" data-day="${d.id}" aria-selected="${d.id===curDay}">
+      <div class="dd">${d.date}</div><div class="dc">${d.city}</div></button>`;
+  }).join("");
+}
+function trailFor(title){ return TRAIL_INFO.find(t=>t.match.test(title)); }
+function renderDay(){
+  const d = TRIP_DAYS.find(x=>x.id===curDay);
+  const m = S.dayMeta[d.id]||{};
+  const items = S.plan[d.id]||[];
+  const body = `
+  <div class="card">
+    <div class="dayhead">
+      <div><h3>${d.date} — ${d.city}</h3><div class="dsub">☀️ ${d.sun} · 🌡️ ${d.temp}</div></div>
+      <div class="chips"><span class="chip">${items.length} stops</span><button class="btn sm" id="addStop">＋ Add</button></div>
+    </div>
+    <div class="glance">
+      <div class="gl"><div class="k">Sleep</div><div class="v">${d.sleep}</div></div>
+      <div class="gl"><div class="k">Movement</div><div class="v">${d.move}</div></div>
+      <div class="gl"><div class="k">Bring / book</div><div class="v">${d.bring}</div></div>
+    </div>
+    <div class="stops">
+      ${items.map(it=>{
+        const tr = trailFor(it.ti);
+        const whoChips = (it.who||[]).map(w=>{const p=who(w);return `<span class="who" style="background:${p.colour}">${p.name}</span>`;}).join("");
+        return `<div class="it" ${tr?`data-trail="${esc(it.ti)}" role="button" tabindex="0"`:""}>
+          ${shot(it.img, "📍", "shot")}
+          <div class="body">
+            <div class="tm">${esc(it.t)}</div>
+            <div class="ti">${it.ti} ${tr?'<span class="trailbadge">🥾 Trail info</span>':""} ${whoChips}</div>
+            <div class="de">${it.de}</div>
+            <div class="acts">
+              <button class="btn sm gh" data-rename="${it.id}">Rename</button>
+              <button class="btn sm gh" data-del="${it.id}">Remove</button>
+            </div>
+          </div>
+        </div>`;
+      }).join("") || `<p class="lede" style="padding:18px 0">Nothing here yet. Hit ＋ Add.</p>`}
+    </div>
+    <details class="details" open>
+      <summary>Details &amp; logistics</summary>
+      <div class="dbody">${dayDetail(d.id)}</div>
+    </details>
+    <details class="details">
+      <summary>Day note</summary>
+      <div class="dbody"><textarea id="dayNote" rows="3" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card-2);color:var(--tx);font:inherit" placeholder="Anything the group should know…">${esc(m.note||"")}</textarea></div>
+    </details>
+  </div>`;
+  document.getElementById("dayBody").innerHTML = body;
+}
+function dayDetail(id){
+  const D = {
+    d1:`<div class="rows">
+      <div class="row"><div class="rk">Rail</div><div class="rv"><strong>Booked</strong> — ref and PIN are in the private copy, not on this public board. £140 for 2 (orig £286.40 − £75.80 split-ticket − £70.60 railcard).</div></div>
+      <div class="row"><div class="rk">Seats</div><div class="rv">Euston→Warrington <strong>Coach B 41 + 49</strong> · Warrington→Oxenholme <strong>Coach E 01 + 05</strong></div></div>
+      <div class="row"><div class="rk">🔴 Railcard</div><div class="rv"><strong>Carry the Two Together Railcard.</strong> £70.60 of the fare depends on it and you must be travelling together.</div></div>
+      <div class="row"><div class="rk">Room</div><div class="rv">Windermere Central Hotel, Room 2 (Airbnb). £117.60. Check-in <strong>16:00</strong>, checkout <strong>11:00</strong>.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv">Nothing. There is nothing to cut — it's a travel day.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv">70% rain, irrelevant. You're on a train.</div></div>
+    </div>`,
+    d2:`<div class="warnbar" style="margin-bottom:13px"><h3>🔴 This day does not work as written</h3><p>11:00 checkout · 11:00–11:30 work call · 12:00 car pickup ~20 min away · 13:00–14:00 the 13:00 catchup. Four commitments, one impossible hour. <strong>Pick a fix in the Decisions tab before you do anything else.</strong></p></div>
+    <div class="rows">
+      <div class="row"><div class="rk">Car</div><div class="rv"><strong>Enterprise Kendal, Mintsfeet Road LA9 6NN · 01539 725500.</strong> Economy auto (Vauxhall Corsa or similar), unlimited mileage, CDW + VAT included. £185.24 prepaid. Open to <strong>18:00</strong> — a later pickup costs nothing.</div></div>
+      <div class="row"><div class="rk">Bus backstop</div><div class="rv">Verified 18 Aug against the Stagecoach Summer 2026 555 PDF: <strong>Windermere Rail Station 11:02 → Kendal Bus Station 11:54</strong>, or 11:32 → 12:24. Kendal Bus Station to Mintsfeet is a <strong>20–25 min walk</strong>.</div></div>
+      <div class="row"><div class="rk">Taxi</div><div class="rv">Uber serves Windermere and Kendal but as <strong>Uber Local Cab</strong> — it dispatches to the same small local fleet, so it is not a guaranteed 4-minute pickup in peak August. Windermere Station Taxi <strong>07506 715 250</strong> · Lakeside <strong>015394 44644</strong>.</div></div>
+      <div class="row"><div class="rk">Accom</div><div class="rv"><strong>3 Cambridge Villas</strong>, Ambleside · 01539 432307 . Superior King en-suite, first floor, valley view. Check-in <strong>11:30–20:30</strong>, bags held earlier. <strong>£340 balance due at check-in.</strong> Free parking ✅. Hot buffet breakfast ✅.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv">The evening walk. If Thursday runs long, drop Wansfell entirely — Friday is the better evening anyway.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv"><strong>60% rain, MWIS 30% cloud-free, frequent rain with heavy bursts, NE 20–30 mph.</strong> Wansfell → <strong>Jenkin Crag</strong> (sheltered, wooded, 1h30).</div></div>
+    </div>`,
+    d3:`<div class="rows">
+      <div class="row"><div class="rk">🟢 Fells</div><div class="rv"><strong>The best evening of the week.</strong> MWIS: 70% cloud-free, very good visibility, wind under 10 mph. If you only get one clear fell evening, this is it.</div></div>
+      <div class="row"><div class="rk">Work</div><div class="rv">From the room at 3 Cambridge Villas. work call 11:00–11:30. No coworking needed — settled 18 Aug.</div></div>
+      <div class="row"><div class="rk">Kat's day</div><div class="rv">599 open top or 555 to Grasmere, ~20 min. ⚠️ <strong>The 599 stops at ~19:35</strong> — the 555 runs much later. Rydal Mount 10:30–16:00, <strong>last entry 15:00</strong>.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv">Loughrigg's full circuit. Do the out-and-back — it is the same summit for half the time.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv">40% rain. Stock Ghyll Force works in anything.</div></div>
+    </div>`,
+    d4:`<div class="okbar" style="margin-bottom:13px"><h3>🟢 Locked and weather-clear</h3><p><strong>Fairfield Horseshoe, decided 18 Aug.</strong> 20% rain, gusts 13 mph. Helvellyn was weather-viable for the first time and was still declined — Fairfield has zero transport dependency, no start-time pressure, and degrades rather than cancels. The Langdale wet flex is not needed.</p></div>
+    <div class="rows">
+      <div class="row"><div class="rk">The walk</div><div class="rv"><strong>18.4 km / 11.4 mi, 928 m, 8 Wainwrights, 6–8 h.</strong> Hard but entirely non-technical — no scrambling, no exposure. Tap the card above for the full route and prep.</div></div>
+      <div class="row"><div class="rk">Start time</div><div class="rv"><strong>Whenever you like.</strong> It starts at the front door. Sunset 20:28 — even a 10:00 start is safe on daylight.</div></div>
+      <div class="row"><div class="rk">🔴 Dinner</div><div class="rv"><strong>Eat early, 17:30–18:30.</strong> No takeaway allowed in the house, peak August, and you'll come off the fell starving. This is the night the dining risk actually bites.</div></div>
+      <div class="row"><div class="rk">Carry</div><div class="rv">2 L water each, all your food, layers, head torch, OL7 + compass. No shelter and no water on the tops.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv">The horseshoe can be cut short at Dove Crag and dropped back to Ambleside — you lose the western arm, not the day.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv">Parked: 516 to Langdale, last back ~22:26. 🪙 New Dungeon Ghyll has <strong>no phone-pay</strong>.</div></div>
+    </div>`,
+    d5:`<div class="rows">
+      <div class="row"><div class="rk">🟢 Best day</div><div class="rv"><strong>10% rain, 19°.</strong> The clearest day of the week — and deliberately the lighter one after Saturday.</div></div>
+      <div class="row"><div class="rk">Shape</div><div class="rv">One directional sweep: Ambleside → Keswick → Derwentwater → back. Nothing doubles back on itself.</div></div>
+      <div class="row"><div class="rk">Launch</div><div class="rv"><strong>Keswick Launch, from £3.</strong> Walkers' launch ~09:45. Calls at Hawes End — <strong>there is no bus to the Catbells trailhead</strong>, so the launch is the route whether or not you drive.</div></div>
+      <div class="row"><div class="rk">Return</div><div class="rv">Last 555 from Keswick <strong>~23:01</strong>. No pressure at all — and you have the car anyway.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv"><strong>Castlerigg first.</strong> The only stop that costs nothing to drop, and the light on Derwentwater is worth more.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv">Stay in Keswick — The Puzzling Place, Derwent Pencil Museum. Castlerigg still works in light rain.</div></div>
+    </div>`,
+    d6:`<div class="warnbar" style="margin-bottom:13px"><h3>⏱️ The binding leg</h3><p>The <strong>19:26 Oxenholme → Euston Avanti</strong> is a non-refundable Advance, Coach F seats 62 + 66. The Windermere → Oxenholme leg is a refundable Off-Peak Day Single, so <strong>driving to Kendal and going straight to Oxenholme costs you nothing</strong> — you simply don't use it, and you drop a train change on your last evening.</p></div>
+    <div class="rows">
+      <div class="row"><div class="rk">Sequence</div><div class="rv">10:30 checkout (pay £340) → work to 16:30 → <strong>16:30 drive, leave 16:45 absolute latest</strong> → 17:05 Enterprise → <strong>17:30 car back</strong> → 17:45 taxi → 18:00 Oxenholme → <strong>19:26 train</strong>.</div></div>
+      <div class="row"><div class="rk">Slack</div><div class="rv"><strong>1h26 at Oxenholme.</strong> Eat in Kendal before the taxi rather than wait on a platform. Enterprise closes 18:00 with no key drop — the 17:30 return leaves 30 min.</div></div>
+      <div class="row"><div class="rk">🔴 Desk</div><div class="rv">The room is gone from 10:30 but you work to 16:30. Ask at breakfast about the guest lounge. Fallbacks: <strong>Force Café</strong>, Stockghyll Lane, or <strong>Ambleside Library</strong>, Mondays 10:00–17:00.</div></div>
+      <div class="row"><div class="rk">Calls</div><div class="rv">work call 11:00–11:30 · second call 13:00–14:00. Date night 18:30 needs no action — you're travelling together.</div></div>
+      <div class="row"><div class="rk">✂️ Cut</div><div class="rv">Kat's Blackwell stop. It slots in on the way through to Kendal (~16:15 pickup) but drops cleanly if the day runs late.</div></div>
+      <div class="row"><div class="rk">🌧️ Flex</div><div class="rv">Irrelevant — indoors then a train.</div></div>
+    </div>`
+  };
+  return D[id]||"";
+}
+
+/* =====================================================================
+   RENDER — JOBS / DESK / MARKET
+   ===================================================================== */
+function renderJobs(){
+  document.getElementById("jobs").innerHTML = GROUP_TASKS.map(t=>{
+    const done = !!S.jobs[t.id];
+    return `<div class="task ${t.blocking&&!done?"blocking":""} ${done?"done":""}">
+      <div class="task-h">
+        <button class="tick ${done?"on":""}" data-job="${t.id}">${done?"✓":""}</button>
+        <div class="tk">
+          <h4>${t.icon} ${t.title} ${t.blocking&&!done?'<span class="chip bad">blocking</span>':""}</h4>
+          <div class="ts">${t.sub}</div>
+          ${t.room?`<div style="margin-top:9px"><button class="btn sm t" data-room="${t.room}">Options &amp; votes →</button></div>`:""}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+function renderDesk(){
+  document.getElementById("desk").innerHTML = DESK_ROOMS.map(r=>{
+    const st = S.desk[r.id]||{votes:{}};
+    return `<div class="room" id="room-${r.id}">
+      <div class="room-h">
+        <div><h4>${r.icon} ${r.title}</h4><p class="lede" style="margin-top:3px">${r.note}</p></div>
+        ${st.locked?`<span class="chip lock">🔒 locked</span>`:`<span class="chip">${Object.keys(st.votes).length} votes</span>`}
+      </div>
+      <div class="opts">
+        ${r.options.map(o=>{
+          const v = st.votes[o.id]||[];
+          const isLocked = st.locked===o.id;
+          return `<div class="opt ${isLocked?"locked":""}">
+            <div class="opt-t">${isLocked?"🔒 ":""}${o.t}</div>
+            <div class="opt-m">${o.m}</div>
+            ${o.tags?`<div class="chips" style="margin-top:8px">${o.tags.map(x=>`<span class="chip">${x}</span>`).join("")}</div>`:""}
+            ${o.scores?`<div class="score">${o.scores.map(([n,s,rr])=>`<div class="sc ${s>=8?"hi":s>=6?"md":"lo"}"><div class="n">${n}</div><div class="s">${s}<span style="font-size:10px;color:var(--tx-3)">/10</span></div><div class="r">${rr}</div></div>`).join("")}</div>`:""}
+            ${o.verdict?`<div class="verdict"><strong>Best for:</strong> ${o.verdict}</div>`:""}
+            <div class="opt-f">
+              <button class="btn sm ${v.includes(ME)?"p":""}" data-vote="${r.id}|${o.id}">👍 ${v.length}</button>
+              ${v.map(x=>{const p=who(x);return `<span class="who" style="background:${p.colour}">${p.name}</span>`;}).join("")}
+              <span style="flex:1"></span>
+              ${st.locked===o.id
+                ? `<button class="btn sm gh" data-unlock="${r.id}">Unlock</button>`
+                : `<button class="btn sm" data-lock="${r.id}|${o.id}">Lock this</button>`}
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>`;
+  }).join("");
+}
+function renderMarket(){
+  document.getElementById("ideas").innerHTML = IDEAS.map(i=>{
+    const v = S.votes[i.id]||{};
+    const mine = v[ME];
+    const tally = Object.entries(v).map(([p,val])=>{const pp=who(p);return `<span class="tl" style="background:${pp.colour}">${pp.init} ${val==="keen"?"🔥":val==="maybe"?"🤔":"✕"}</span>`;}).join("");
+    return `<div class="idea">
+      ${shot(i.img, i.e, "ph")}
+      <div class="ib">
+        <h4>${i.t}</h4>
+        <div class="pl2">${i.p}</div>
+        <div class="wy">${i.w}</div>
+        <div class="votes">
+          <button class="vb keen ${mine==="keen"?"on":""}" data-idea="${i.id}|keen">🔥 Keen</button>
+          <button class="vb maybe ${mine==="maybe"?"on":""}" data-idea="${i.id}|maybe">🤔 Maybe</button>
+          <button class="vb no ${mine==="no"?"on":""}" data-idea="${i.id}|no">✕ No</button>
+        </div>
+        <div class="tally">${tally}</div>
+      </div>
+    </div>`;
+  }).join("");
+  const voted = IDEAS.filter(i=>S.votes[i.id]&&Object.keys(S.votes[i.id]).length).length;
+  document.getElementById("mktChip").textContent = `${voted} / ${IDEAS.length} voted on`;
+  document.getElementById("hubIdeas").textContent = `${IDEAS.length} on the table`;
+}
+
+/* =====================================================================
+   RENDER — PACK
+   ===================================================================== */
+function packState(){ try{ return JSON.parse(LS.get(PACK_KEY)||"{}"); }catch(e){ return {}; } }
+function renderPacking(){
+  const st = packState();
+  let n=0,tot=0;
+  const html = PACKING.map(([cat,items])=>{
+    return `<div class="pcat">${cat}</div><div class="plist">${items.map(it=>{
+      tot++; const k=cat+"|"+it; const on=!!st[k]; if(on)n++;
+      return `<div class="pi ${on?"on":""}" data-pack="${esc(k)}"><span class="pb">${on?"✓":""}</span><span>${it}</span></div>`;
+    }).join("")}</div>`;
+  }).join("");
+  document.getElementById("packing").innerHTML = html;
+  document.getElementById("packChip").textContent = `${n} / ${tot} packed`;
+}
+function renderGallery(){
+  document.getElementById("gallery").innerHTML = GALLERY.map((g,i)=>
+    `<div class="gi" data-lb="${i}">${g.e}<img src="${IMG}${g.img}.jpg" alt="${g.cap}" loading="lazy" style="position:absolute;inset:0" onerror="this.remove()"></div>`
+  ).join("");
+}
+
+/* =====================================================================
+   RENDER ALL
+   ===================================================================== */
+function renderAll(){
+  renderBlocker(); renderTrack(); renderPulse(); renderCrew();
+  renderDayNav(); renderDay(); renderJobs(); renderDesk(); renderMarket();
+  renderPacking(); renderGallery();
+}
+
+/* =====================================================================
+   COUNTDOWN + CLOCK
+   ===================================================================== */
+function tick(){
+  const now = new Date();
+  const ms = TRIP_START - now;
+  const el = document.getElementById("cdown");
+  if(ms<=0){
+    const end = new Date("2026-08-24T22:27:00+01:00");
+    el.innerHTML = now<end ? `<span style="color:#8fe0b0">On the trip</span>` : "Home";
+  } else {
+    const d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5), m=Math.floor(ms%36e5/6e4);
+    el.innerHTML = d>0 ? `${d}<small>d</small> ${h}<small>h</small> ${m}<small>m</small>` : `${h}<small>h</small> ${m}<small>m</small>`;
+  }
+  try{
+    const t = new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",minute:"2-digit"}).format(now);
+    const hr = +new Intl.DateTimeFormat("en-GB",{timeZone:TZ,hour:"2-digit",hour12:false}).format(now);
+    document.getElementById("clockPill").textContent = `${hr>=6&&hr<20?"☀️":"🌙"} ${t} in the Lakes`;
+  }catch(e){}
+}
+
+/* =====================================================================
+   EVENTS
+   ===================================================================== */
+function goto(tab){
+  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("on", p.id==="p-"+tab));
+  document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected", b.dataset.tab===tab));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+document.addEventListener("click", e=>{
+  const t = e.target.closest("[data-tab],[data-goto],[data-day],[data-job],[data-vote],[data-lock],[data-unlock],[data-idea],[data-pack],[data-room],[data-piece],[data-me],[data-lb],[data-rename],[data-del],[data-close],[data-trail]");
+  if(!t) return;
+  const d = t.dataset;
+
+  if(d.tab){ goto(d.tab); return; }
+  if(d.goto){ goto(d.goto); return; }
+  if(d.close!==undefined){ t.closest(".modal").classList.remove("on"); return; }
+
+  if(d.day){ curDay=d.day; renderDayNav(); renderDay(); return; }
+
+  if(d.job){
+    S.jobs[d.job] = !S.jobs[d.job];
+    const task = GROUP_TASKS.find(x=>x.id===d.job);
+    logPulse(S.jobs[d.job] ? `ticked off “${task.title}”` : `re-opened “${task.title}”`);
+    buzz(15); save(); renderBlocker(); renderTrack(); renderJobs(); renderPulse(); return;
+  }
+  if(d.room){ goto("desk"); setTimeout(()=>document.getElementById("room-"+d.room)?.scrollIntoView({behavior:"smooth",block:"center"}),120); return; }
+
+  if(d.vote){
+    const [rid,oid]=d.vote.split("|");
+    const st=S.desk[rid]; st.votes[oid]=st.votes[oid]||[];
+    const i=st.votes[oid].indexOf(ME);
+    if(i<0){ st.votes[oid].push(ME); logPulse(`backed an option in “${DESK_ROOMS.find(r=>r.id===rid).title}”`); }
+    else st.votes[oid].splice(i,1);
+    buzz(12); save(); renderDesk(); renderPulse(); return;
+  }
+  if(d.lock){
+    const [rid,oid]=d.lock.split("|");
+    S.desk[rid].locked=oid;
+    logPulse(`🔒 locked “${DESK_ROOMS.find(r=>r.id===rid).options.find(o=>o.id===oid).t}”`);
+    buzz([12,40,12]); save(); renderDesk(); renderPulse(); return;
+  }
+  if(d.unlock){ S.desk[d.unlock].locked=null; logPulse("unlocked a decision"); save(); renderDesk(); renderPulse(); return; }
+
+  if(d.idea){
+    const [id,val]=d.idea.split("|");
+    S.votes[id]=S.votes[id]||{};
+    if(S.votes[id][ME]===val) delete S.votes[id][ME]; else S.votes[id][ME]=val;
+    const idea=IDEAS.find(x=>x.id===id);
+    logPulse(`voted ${val} on ${idea.t.replace(/&amp;/g,"&")}`);
+    buzz(12); save(); renderMarket(); renderPulse(); return;
+  }
+
+  if(d.pack){
+    const st=packState(); st[d.pack]=!st[d.pack];
+    LS.set(PACK_KEY, JSON.stringify(st)); buzz(10); renderPacking(); return;
+  }
+
+  if(d.piece){
+    const [tid,p]=d.piece.split("|");
+    S.crew[tid]=S.crew[tid]||{}; S.crew[tid].piece=p;
+    buzz(12); save(); renderCrew(); return;
+  }
+  if(d.me){ ME=d.me; LS.set(STORE_KEY+"-me",ME); renderAll(); return; }
+
+  if(d.rename){
+    const it = (S.plan[curDay]||[]).find(x=>x.id===d.rename); if(!it) return;
+    const v = prompt("Rename this stop", it.ti.replace(/<[^>]+>/g,"")); if(v===null) return;
+    it.ti=v; logPulse(`renamed a stop on ${TRIP_DAYS.find(x=>x.id===curDay).date}`); save(); renderDay(); return;
+  }
+  if(d.del){
+    if(!confirm("Remove this stop?")) return;
+    S.plan[curDay]=(S.plan[curDay]||[]).filter(x=>x.id!==d.del);
+    logPulse(`removed a stop from ${TRIP_DAYS.find(x=>x.id===curDay).date}`); save(); renderDay(); return;
+  }
+
+  if(d.lb!==undefined){ openLB(+d.lb); return; }
+  if(d.trail){ openTrail(d.trail, t.querySelector("img")?.src); return; }
+});
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape") document.querySelectorAll(".modal.on").forEach(m=>m.classList.remove("on"));
+  if(e.key==="Enter"||e.key===" "){
+    const t=e.target.closest("[data-trail]");
+    if(t){ e.preventDefault(); openTrail(t.dataset.trail, t.querySelector("img")?.src); }
+  }
+});
+document.addEventListener("change", e=>{
+  if(e.target.dataset.vibe){
+    const id=e.target.dataset.vibe;
+    S.crew[id]=S.crew[id]||{}; S.crew[id].vibe=e.target.value;
+    save(); renderCrew();
+  }
+});
+document.addEventListener("input", e=>{
+  if(e.target.id==="dayNote"){ S.dayMeta[curDay].note=e.target.value; clearTimeout(window._nt); window._nt=setTimeout(save,600); }
+});
+document.addEventListener("click", e=>{
+  if(e.target.id==="addStop"){
+    const ti=prompt("What's the stop?"); if(!ti) return;
+    const tm=prompt("Time (optional)","")||"—";
+    S.plan[curDay].push({id:curDay+"-"+Date.now(), t:tm, ti, de:"", img:"", who:[]});
+    logPulse(`added “${ti}” to ${TRIP_DAYS.find(x=>x.id===curDay).date}`);
+    save(); renderDay(); renderPulse();
+  }
+  if(e.target.id==="packReset"){ if(confirm("Untick everything?")){ LS.del(PACK_KEY); renderPacking(); } }
+  if(e.target.id==="pulseClear"){ S.pulse=[]; save(); renderPulse(); }
+  if(e.target.id==="btnTheme"){
+    const cur=document.documentElement.getAttribute("data-theme");
+    const next = cur==="dark"?"light":cur==="light"?"":"dark";
+    if(next) document.documentElement.setAttribute("data-theme",next); else document.documentElement.removeAttribute("data-theme");
+    LS.set(STORE_KEY+"-theme",next);
+  }
+  if(e.target.id==="btnHelp") openHelp();
+  if(e.target.id==="btnBookings"||e.target.closest("#btnBookings")) openBookings();
+});
+
+/* modals */
+function openTrail(title, imgSrc){
+  const tr = trailFor(title); if(!tr) return;
+  document.getElementById("tmName").textContent = tr.name;
+  document.getElementById("tmTag").textContent = tr.tag;
+  const sh=document.getElementById("tmShot");
+  if(imgSrc){ sh.src=imgSrc; sh.style.display="block"; } else sh.style.display="none";
+  document.getElementById("tmStats").innerHTML = tr.stats.map(([k,v])=>`<div class="st"><div class="k">${k}</div><div class="v">${v}</div></div>`).join("");
+  document.getElementById("tmRoute").textContent = tr.route;
+  document.getElementById("tmPrep").innerHTML = tr.prep.map(p=>`<li>${p}</li>`).join("");
+  document.getElementById("tmPark").innerHTML = `<strong>Parking:</strong> ${tr.parking}`;
+  const a=document.getElementById("tmLink"); a.href=tr.link; a.textContent=tr.linkLabel;
+  document.getElementById("trailModal").classList.add("on");
+  buzz(10);
+}
+let lbi=0;
+function openLB(i){
+  lbi=i; const g=GALLERY[i];
+  const img=document.getElementById("lbimg");
+  img.src=IMG+g.img+".jpg"; img.alt=g.cap;
+  img.onerror=()=>{ img.removeAttribute("src"); };
+  document.getElementById("lbCount").textContent=`${i+1} / ${GALLERY.length} — ${g.cap}`;
+  document.getElementById("lightbox").classList.add("on");
+}
+document.getElementById("lbPrev").onclick=()=>openLB((lbi-1+GALLERY.length)%GALLERY.length);
+document.getElementById("lbNext").onclick=()=>openLB((lbi+1)%GALLERY.length);
+
+function gm(title, body){
+  document.getElementById("gmTitle").innerHTML=title;
+  document.getElementById("gmBody").innerHTML=body;
+  document.getElementById("genModal").classList.add("on");
+}
+function openBookings(){
+  gm("📞 Key numbers", `
+  <p class="lede" style="margin-bottom:14px">Booking references, PINs and card details are deliberately <strong>not on this board</strong> — it is on a public URL. They live in the private copy and in Notion.</p>
+  <div class="rows">
+    <div class="row"><div class="rk">Accom</div><div class="rv">3 Cambridge Villas, Ambleside — <strong>01539 432307</strong><br>Check-in 11:30–20:30 · checkout <strong>10:30</strong> · £340 balance due at check-in</div></div>
+    <div class="row"><div class="rk">Car</div><div class="rv">Enterprise Kendal, Mintsfeet Rd LA9 6NN — <strong>01539 725500</strong><br>Thu 20 <strong>12:00</strong> → Mon 24 <strong>17:30</strong> · open to 18:00, no key drop</div></div>
+    <div class="row"><div class="rk">Taxis</div><div class="rv">Ambleside <strong>015394 68222</strong><br>Windermere Station <strong>07506 715 250</strong><br>Lakeside <strong>015394 44644</strong></div></div>
+    <div class="row"><div class="rk">Rail</div><div class="rv">Out: Euston <strong>18:30</strong> Wed → Windermere 21:39<br>Back: Oxenholme <strong>19:26</strong> Mon → Euston 22:27<br>🔴 Carry the Two Together Railcard</div></div>
+    <div class="row"><div class="rk">Emergency</div><div class="rv"><strong>999</strong> / 112 · Mountain Rescue: 999 → Police → Mountain Rescue</div></div>
+  </div>`);
+}
+function openHelp(){
+  gm("❔ How this board works", `
+  <div class="rows">
+    <div class="row"><div class="rk">Board</div><div class="rv">The prep track — one bead per open job. All three tokens move together; it's a group track, not a race.</div></div>
+    <div class="row"><div class="rk">Itinerary</div><div class="rv">Manual by design. Add, rename and remove stops yourself — nothing auto-reshuffles a curated plan. Walk-grade stops have a <strong>🥾 Trail info</strong> badge; tap the card for route, prep and parking.</div></div>
+    <div class="row"><div class="rk">Jobs</div><div class="rv">Tick things off. Red ones are blocking — they need to land before the train.</div></div>
+    <div class="row"><div class="rk">Decisions</div><div class="rv">Vote 👍 on options, then someone <strong>locks</strong> the pick so nobody reopens it on the platform.</div></div>
+    <div class="row"><div class="rk">Ideas</div><div class="rv">Everything researched but not scheduled. Vote keen / maybe / no.</div></div>
+    <div class="row"><div class="rk">Pack</div><div class="rv">Your packing ticks are <strong>device-local</strong> — they never go into group sync. Everything else is shared.</div></div>
+    <div class="row"><div class="rk">Sync</div><div class="rv">${REMOTE_API_URL?"☁️ Group sync is on — everyone sees the same state.":"💾 Currently saving to <strong>this device only</strong>. Add a Google Apps Script URL to <code>REMOTE_API_URL</code> to turn on group sync."}</div></div>
+    <div class="row"><div class="rk">Photos</div><div class="rv">Illustrations drop into <code>images/</code> as <code>scene-*.jpg</code>. Missing ones fall back to emoji — the board never breaks.</div></div>
+  </div>`);
+}
+
+/* boot */
+(function(){
+  const th = LS.get(STORE_KEY+"-theme");
+  if(th) document.documentElement.setAttribute("data-theme",th);
+  renderAll(); tick(); setInterval(tick,1000);
+  pull(); setInterval(pull, 45000);
+  setTimeout(()=>{ document.getElementById("syncChip").style.opacity=".55"; }, 2500);
+})();
+</script>
+</body>
+</html>
