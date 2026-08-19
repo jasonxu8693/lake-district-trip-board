@@ -1366,6 +1366,36 @@
       const custom = stored.filter(i => i && typeof i.id === "string" && i.id.indexOf("custom_") === 0);
       return [...base, ...custom];
     }
+    // Rooms deliberately retired from the board. A removed room is NOT in defaults
+    // any more, so the custom-room passthrough below would preserve it in the
+    // group's synced state forever. Retiring has to be explicit.
+    const RETIRED_ROOMS = ["r_liz"];
+    // Bosses deliberately retired. Same reasoning: groupDone is merged from saved
+    // state, so a key dropped from defaultState survives until it is deleted.
+    const RETIRED_BOSSES = ["lizCovered"];
+
+    function normalizeBosses(stored) {
+      const out = { ...defaultState.groupDone, ...(stored || {}) };
+      RETIRED_BOSSES.forEach(k => { delete out[k]; });
+      return out;
+    }
+
+    // Backfill crew defaults onto saved players. `players` is stored wholesale, so
+    // a change to defaultState.players never reaches an existing synced board
+    // without this. Group edits (piece, vibe, their own dates) always win.
+    function normalizeCrew(stored) {
+      const base = structuredClone(defaultState.players);
+      if (!Array.isArray(stored) || !stored.length) return base;
+      return stored.map(p => {
+        const d = base.find(b => b && b.name === p.name);
+        if (!d) return p;
+        const out = { ...d, ...p };
+        if (d.arrival && (!p.arrival || !p.arrival.date)) out.arrival = { ...d.arrival };
+        if (d.departure && (!p.departure || !p.departure.date)) out.departure = { ...d.departure };
+        return out;
+      });
+    }
+
     function normalizeDeskRooms(stored) {
       const base = structuredClone(defaultDesk.rooms);
       if (!Array.isArray(stored)) return base;
@@ -1389,7 +1419,7 @@
         if (d.kind === "car") out.drivers = Array.isArray(s.drivers) ? s.drivers : [];
         return out;
       });
-      const custom = stored.filter(r => r && typeof r.id === "string" && !baseIds.includes(r.id));
+      const custom = stored.filter(r => r && typeof r.id === "string" && !baseIds.includes(r.id) && !RETIRED_ROOMS.includes(r.id));
       return [...merged, ...custom];
     }
 
@@ -1403,8 +1433,8 @@
         return {
           ...structuredClone(defaultState),
           ...parsed,
-          players: parsed.players || structuredClone(defaultState.players),
-          groupDone: { ...defaultState.groupDone, ...(parsed.groupDone || {}) },
+          players: normalizeCrew(parsed.players),
+          groupDone: normalizeBosses(parsed.groupDone),
           ideas: normalizeIdeas(parsed.ideas),
           ideaVotes: parsed.ideaVotes || {},
           desk: parsed.desk ? { rooms: normalizeDeskRooms(parsed.desk.rooms) } : structuredClone(defaultDesk),
@@ -1432,8 +1462,8 @@
       state = {
         ...structuredClone(defaultState),
         ...remote,
-        players: remote.players || structuredClone(defaultState.players),
-        groupDone: { ...defaultState.groupDone, ...(remote.groupDone || {}) },
+        players: normalizeCrew(remote.players),
+        groupDone: normalizeBosses(remote.groupDone),
         ideas: normalizeIdeas(remote.ideas),
         ideaVotes: remote.ideaVotes || {},
         desk: remote.desk ? { rooms: normalizeDeskRooms(remote.desk.rooms) } : structuredClone(defaultDesk),
