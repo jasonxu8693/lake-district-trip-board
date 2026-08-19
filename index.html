@@ -1101,9 +1101,9 @@
             <div class="photo-card"><img src="images/scene-buttermere.jpg" alt="Buttermere" loading="lazy"><div class="cap"><strong>Buttermere</strong><span>Flat lake circuit under big crags.</span></div></div>
             <div class="photo-card"><img src="images/scene-wastwater.jpg" alt="Wastwater" loading="lazy"><div class="cap"><strong>Wastwater</strong><span>"Britain's favourite view" — the long-shot drive.</span></div></div>
             <div class="photo-card"><img src="images/scene-ullswater.jpg" alt="Ullswater" loading="lazy"><div class="cap"><strong>Ullswater</strong><span>Steamer country — walk in to Aira Force.</span></div></div>
-            <div class="photo-card"><img src="images/scene-keswick.jpg" alt="Keswick" loading="lazy"><div class="cap"><strong>Keswick</strong><span>Sunday's market-town base.</span></div></div>
+            <div class="photo-card"><img src="images/scene-herdwick.jpg" alt="A Herdwick sheep" loading="lazy"><div class="cap"><strong>Herdwicks</strong><span>The local breed — they own the fells.</span></div></div>
           </div>
-          <div class="source-note">Photos via Wikimedia Commons. Hours, prices and timetables researched 18 Aug 2026 — re-check anything marked ⚠️ on the day.</div>
+          <div class="source-note">Illustrations generated for this board. Hours, prices and timetables researched 18 Aug 2026 — re-check anything marked ⚠️ on the day.</div>
         </div>
       </section>
     </main>
@@ -1208,7 +1208,7 @@
 
     // Photo per idea by id — applied at render time so it also reaches ideas
     // already saved in the synced state (which predate the img field).
-    const IDEA_IMG = { ihilltop: "scene-hilltop.jpg", igrasmere: "scene-grasmere.jpg", irydal: "scene-rydal.jpg", istockghyll: "scene-ambleside.jpg", icastlerigg: "scene-castlerigg.jpg", iblackwell: "scene-windermere.jpg", ihawkshead: "scene-hawkshead.jpg", itarnhows: "scene-tarnhows.jpg", ilangdale: "scene-stickleghyll.jpg", iconiston: "scene-coniston.jpg", ifreedom: "scene-windermere.jpg", ihonister: "scene-honister.jpg", ibuttermere: "scene-buttermere.jpg", iashness: "scene-ashness.jpg", ilodore: "scene-lodore.jpg", iwhinlatter: "scene-whinlatter.jpg", iaira: "scene-airaforce.jpg", iullswater: "scene-ullswater.jpg", ikirkstone: "scene-kirkstone.jpg", ipuzzling: "scene-keswick.jpg", iwastwater: "scene-wastwater.jpg", ihardknott: "scene-hardknott.jpg", iratty: "scene-ratty.jpg" };
+    const IDEA_IMG = { ihilltop: "scene-hilltop.jpg", igrasmere: "scene-grasmere.jpg", irydal: "scene-rydal.jpg", istockghyll: "scene-stockghyll.jpg", icastlerigg: "scene-castlerigg.jpg", iblackwell: "scene-blackwell.jpg", ihawkshead: "scene-hawkshead.jpg", itarnhows: "scene-tarnhows.jpg", ilangdale: "scene-langdale.jpg", iconiston: "scene-coniston.jpg", ifreedom: "scene-windermere.jpg", ihonister: "scene-honister.jpg", ibuttermere: "scene-buttermere.jpg", iashness: "scene-ashness.jpg", ilodore: "scene-lodore.jpg", iwhinlatter: "scene-whinlatter.jpg", iaira: "scene-airaforce.jpg", iullswater: "scene-ullswater.jpg", ikirkstone: "scene-kirkstone.jpg", ipuzzling: "scene-keswick.jpg", iwastwater: "scene-wastwater.jpg", ihardknott: "scene-hardknott.jpg", iratty: "scene-ratty.jpg" };
 
 
     // Crew Desk — own a job, share options, group votes, owner locks the pick.
@@ -2699,26 +2699,26 @@
     // keyword rules (for example "tea" or "coast") from assigning the wrong
     // artwork and guarantees every itinerary card has a deliberate image.
     const EXACT_SCENE = {
-      "leave home → euston, board the 18:30 together": "scene-windermere.jpg",
-      "oxenholme change → windermere, walk to the guest house": "scene-windermere.jpg",
-      "checkout, then car pickup at enterprise kendal": "scene-kirkstone.jpg",
-      "check in — 3 cambridge villas, ambleside": "scene-ambleside.jpg",
-      "wansfell pike — evening fell": "scene-ambleside.jpg",
+      "leave home → euston, board the 18:30 together": "scene-train.jpg",
+      "oxenholme change → windermere, walk to the guest house": "scene-arrival.jpg",
+      "checkout, then car pickup at enterprise kendal": "scene-drive.jpg",
+      "check in — 3 cambridge villas, ambleside": "scene-stay.jpg",
+      "wansfell pike — evening fell": "scene-wansfell.jpg",
       "kat — hill top + the west shore": "scene-hilltop.jpg",
-      "work day — call 11:00–11:30": "scene-ambleside.jpg",
+      "work day — call 11:00–11:30": "scene-work.jpg",
       "loughrigg fell, then waterhead at dusk": "scene-rydal.jpg",
       "kat — grasmere + the wordsworth corridor": "scene-grasmere.jpg",
-      "fairfield horseshoe — the big one": "scene-langdale.jpg",
-      "eat early — walk in by 17:30–18:30": "scene-hawkshead.jpg",
+      "fairfield horseshoe — the big one": "scene-fairfield.jpg",
+      "eat early — walk in by 17:30–18:30": "scene-dinner.jpg",
       "parked alternatives — helvellyn or langdale": "scene-helvellyn.jpg",
       "ambleside → keswick, then the launch to hawes end": "scene-derwentwater.jpg",
       "catbells": "scene-catbells.jpg",
       "derwentwater lakeshore, launch back, then keswick town": "scene-keswick.jpg",
       "castlerigg stone circle": "scene-castlerigg.jpg",
       "checkout 10:30, then work until 16:30": "scene-ambleside.jpg",
-      "drive to kendal, car back 17:30, taxi to oxenholme": "scene-kirkstone.jpg",
-      "avanti → london euston, arrives 22:27": "scene-windermere.jpg",
-      "kat — blackwell, the arts & crafts house": "scene-windermere.jpg"
+      "drive to kendal, car back 17:30, taxi to oxenholme": "scene-drive.jpg",
+      "avanti → london euston, arrives 22:27": "scene-train-night.jpg",
+      "kat — blackwell, the arts & crafts house": "scene-blackwell.jpg"
     };
 
     function sceneForItem(it) {
