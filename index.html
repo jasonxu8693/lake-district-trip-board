@@ -1794,7 +1794,12 @@
     }
 
     function ideaImageFor(idea) {
-      if (idea.img || IDEA_IMG[idea.id]) return idea.img || IDEA_IMG[idea.id];
+      // IDEA_IMG is the source of truth for SEEDED ideas. A saved `img` from an
+      // earlier build must not pin a card to a retired image — that silently
+      // overrode three re-points on the live board (2026-08-19). Ideas the group
+      // added themselves are not in IDEA_IMG, so they keep their own img.
+      if (IDEA_IMG[idea.id]) return IDEA_IMG[idea.id];
+      if (idea.img) return idea.img;
       // Custom / synced ideas: reuse the itinerary scene mapper so market cards
       // and itinerary cards resolve images the same way, then default to a
       // destination-true fallback rather than an emoji hole.
