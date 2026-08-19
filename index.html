@@ -809,7 +809,7 @@
         <div>
           <div class="eyebrow">🇬🇧 The Lake District · Wed 19 → Mon 24 Aug 2026</div>
           <h1><span>The Lakes</span><span class="shine">trip board</span></h1>
-          <p>Jason, Kat &amp; Liz — six days across Windermere, Ambleside and Keswick. Votes, trains, decisions and group progress.</p>
+          <p>Jason &amp; Kat for six days across Windermere, Ambleside and Keswick — Liz joins Thu–Mon, staying nearby and sorting her own travel. Votes, trains, decisions and group progress.</p>
           <div class="hero-actions">
             <button class="btn" data-jump="plan">🗓️ Itinerary</button>
             <button class="btn secondary" data-jump="ideas">🎯 Activity Market</button>
@@ -1151,16 +1151,15 @@
     // group's current stop and they all advance together as bosses get cleared.
     const checkpoints = [
       { id: "spawn", title: "Trip start", meta: "Go", icon: "🚂", type: "personal", x: 10.5, y: 82 },
-      { id: "lizCovered", title: "Liz covered", meta: "Boss 1", icon: "👤", type: "boss", x: 20, y: 62 },
-      { id: "thursdayFix", title: "Thursday fixed", meta: "Boss 2", icon: "🔴", type: "boss", x: 32, y: 40 },
-      { id: "bnbArrival", title: "B&B told", meta: "Boss 3", icon: "✉️", type: "group", x: 46, y: 24 },
-      { id: "coinsApps", title: "Coins + apps", meta: "Boss 4", icon: "🪙", type: "group", x: 62, y: 28 },
-      { id: "offlinePack", title: "Offline pack", meta: "Boss 5", icon: "🗺️", type: "group", x: 75, y: 42 },
-      { id: "mondayDesk", title: "Monday desk", meta: "Boss 6", icon: "💻", type: "boss", x: 84, y: 58 },
-      { id: "hillTop", title: "Hill Top call", meta: "Boss 7", icon: "🎟️", type: "group", x: 78, y: 74 },
-      { id: "activityShortlist", title: "Shortlist voted", meta: "Boss 8", icon: "🎯", type: "group", x: 62, y: 80 },
-      { id: "itinerary", title: "Itinerary locked", meta: "Boss 9", icon: "📍", type: "group", x: 47, y: 74 },
-      { id: "profilesFix", title: "Profiles fixed", meta: "Boss 10", icon: "🚨", type: "boss", x: 34, y: 66 }
+      { id: "thursdayFix", title: "Thursday fixed", meta: "Boss 1", icon: "🔴", type: "boss", x: 32, y: 40 },
+      { id: "bnbArrival", title: "B&B told", meta: "Boss 2", icon: "✉️", type: "group", x: 46, y: 24 },
+      { id: "coinsApps", title: "Coins + apps", meta: "Boss 3", icon: "🪙", type: "group", x: 62, y: 28 },
+      { id: "offlinePack", title: "Offline pack", meta: "Boss 4", icon: "🗺️", type: "group", x: 75, y: 42 },
+      { id: "mondayDesk", title: "Monday desk", meta: "Boss 5", icon: "💻", type: "boss", x: 84, y: 58 },
+      { id: "hillTop", title: "Hill Top call", meta: "Boss 6", icon: "🎟️", type: "group", x: 78, y: 74 },
+      { id: "activityShortlist", title: "Shortlist voted", meta: "Boss 7", icon: "🎯", type: "group", x: 62, y: 80 },
+      { id: "itinerary", title: "Itinerary locked", meta: "Boss 8", icon: "📍", type: "group", x: 47, y: 74 },
+      { id: "profilesFix", title: "Profiles fixed", meta: "Boss 9", icon: "🚨", type: "boss", x: 34, y: 66 }
     ];
 
     const colours = ["#5fb0d9", "#d9a05f", "#b48fd9", "#8fd6a8", "#a3c6da", "#e3ddc9", "#f4f6f2"];
@@ -1215,12 +1214,6 @@
     // Crew Desk — own a job, share options, group votes, owner locks the pick.
     const defaultDesk = {
       rooms: [
-        { id: "r_liz", emoji: "👤", kind: "custom", title: "Liz — a seat and a bed", desc: "THE blocker. Every booking covers two: rail is 2 seats on a Two Together Railcard (2-person by definition), the Windermere room sleeps 2, and the Ambleside room is a king for 2. The train is Wednesday evening.", owners: [], options: [
-          { id: "liz_rail_own", by: null, researcher: "Research", title: "Liz books her own Euston → Oxenholme single", link: "", price: "Walk-up Advance £", availability: "Cleanest fix", availabilityTone: "done", notes: "Advances for the same day will be dear but they exist — the 18:30 or an adjacent Avanti, then the 21:20 branch to Windermere. Does not touch the existing 2-person booking or the railcard.", votes: {} },
-          { id: "liz_drive", by: null, researcher: "Research", title: "Liz drives up and meets you Thursday", link: "", price: "Fuel + ~5–6 h on the M6", availability: "Fixes Thursday too", availabilityTone: "done", notes: "Sidesteps the rail problem entirely and gives the group a second car — which fixes Thursday's Kendal pickup as a bonus. Free parking at the B&B is confirmed.", votes: {} },
-          { id: "liz_room", by: null, researcher: "Research", title: "Add a second room at the Ambleside B&B", link: "", price: "Peak-August rate", availability: "⚠️ Peak season", availabilityTone: "warn", notes: "Call the B&B on 01539 432307. Peak August, 4 nights, one night's notice — availability is genuinely doubtful. Ask tonight, not tomorrow.", votes: {} },
-          { id: "liz_weekend", by: null, researcher: "Research", title: "Liz joins for the weekend only", link: "", price: "Smallest booking problem", availability: "Best-days compromise", availabilityTone: "warn", notes: "Sat + Sun are the two dry days and the two best days — Fairfield and Catbells. Arrive Friday night, leave Monday.", votes: {} }
-        ], status: "open", chosen: null },
         { id: "r_thu", emoji: "🔴", kind: "custom", title: "Thursday — pick the fix", desc: "Four commitments, one impossible hour: 11:00 checkout · 11:00–11:30 call · 12:00 car pickup ~20 min away · 13:00–14:00 catchup. Enterprise is open to 18:00 and the car is prepaid, so time is the flexible part.", owners: [], options: [
           { id: "thu_late", by: null, researcher: "Research", title: "Take the 11:00 call from the room, check out late", link: "", price: "Free if granted", availability: "Ask the host", availabilityTone: "warn", notes: "Ask the Windermere host for a ~12:00 checkout. Keeps the call on known-good wifi and power, then bus or taxi to Kendal for a mid-afternoon pickup.", verdict: "Keeping the call clean — if the host says yes.", scores: [{ k: "Call quality", v: 9, n: "Own room, own wifi" }, { k: "Cost", v: 9, n: "Free if granted" }, { k: "Certainty", v: 5, n: "Host may refuse" }, { k: "Knock-on", v: 8, n: "Nothing else moves" }], votes: {} },
           { id: "thu_push", by: null, researcher: "Research", title: "Push the car pickup to ~15:00", link: "", price: "Zero cost", availability: "Fully in your control", availabilityTone: "done", notes: "Enterprise is open to 18:00 and it's prepaid, so a later pickup costs nothing. Bags held at the B&B (they hold before check-in), both calls from a café, collect the car after.", verdict: "Certainty — nothing depends on anyone else saying yes.", scores: [{ k: "Call quality", v: 6, n: "Café wifi is a gamble" }, { k: "Cost", v: 9, n: "Zero" }, { k: "Certainty", v: 9, n: "Fully in your control" }, { k: "Knock-on", v: 7, n: "Later Ambleside arrival" }], votes: {} },
@@ -1258,40 +1251,29 @@
     // board with an empty plan; after that the group's edits win (the `seeded` flag
     // stops it re-seeding even if they clear a day).
     const LAKES_SEED = [
-      { dayId: "d1", time: "17:50", title: "Leave home — Euston with a 20 min buffer", emoji: "⏰", note: "Departure is 18:30, NOT 19:00. No security, no bag drop." },
-      { dayId: "d1", time: "18:00", title: "Buy dinner at Euston — confirmed plan", emoji: "🍽️", note: "Not a fallback: nothing in Windermere, Ambleside or Bowness is verified open past 22:30, and Vinegar Jones shuts 19:30." },
-      { dayId: "d1", time: "18:30", title: "Avanti → Glasgow Central — Coach B, seats 41 + 49", emoji: "🚆", note: "Split ticket, leg one." },
-      { dayId: "d1", time: "20:14", title: "Warrington Bank Quay — STAY ON THE TRAIN", emoji: "🛑", note: "Split ticket. Do not get off — just show the next ticket. Coach E, seats 01 + 05." },
-      { dayId: "d1", time: "21:10", title: "Oxenholme — 10 min change to the branch", emoji: "🔁", note: "21:20 Northern to Windermere, booked and protected on the same ticket — the connection is guaranteed." },
-      { dayId: "d1", time: "21:39", title: "Windermere — walk to the hotel", emoji: "🛏️", note: "Windermere Central Hotel is in town, walkable from the station — that is the entire reason for this night." },
-      { dayId: "d2", time: "09:00", title: "Morning work block", emoji: "💻", note: "Jason working from the room." },
-      { dayId: "d2", time: "11:00", title: "THE CLASH — checkout 11:00 vs the 11:00–11:30 call", emoji: "🔴", note: "Head-on collision. Pick a fix in the Crew Desk Thursday room — this is the trip's live blocker." },
-      { dayId: "d2", time: "12:00", title: "Enterprise Kendal — car pickup", emoji: "🚗", note: "Mintsfeet Road, Kendal. Prepaid £185.24, branch open to 18:00 — 15 min late is fine. Backstop: 555 bus 11:02 → Kendal 11:54 + 20–25 min walk." },
-      { dayId: "d2", time: "13:00", title: "13:00–14:00 catchup call — the day-breaker", emoji: "⚠️", note: "Not reflected anywhere in the original plan. This is what makes Thursday undeliverable as written." },
-      { dayId: "d2", time: "14:30", title: "Check in — 3 Cambridge Villas, Ambleside", emoji: "🛏️", note: "Check-in 11:30–20:30, bags held earlier. £340 balance due at the desk. Free parking included." },
-      { dayId: "d2", time: "17:30", title: "Wansfell Pike — evening fell", emoji: "🥾", note: "FREE. 4.7 km, 450 m, ~2h15, moderate with steep rocky sections. Starts behind The White Lion — the best evening walk on this trip." },
-      { dayId: "d2", time: "", title: "Wet fallback — Jenkin Crag", emoji: "🌧️", note: "FREE. 4 km, 1h30, easy and wooded. 60% rain today — the realistic call if work overruns or it's bucketing." },
+      { dayId: "d1", time: "17:50", title: "Leave home → Euston, board the 18:30 together", emoji: "🚆", note: "Leave ~17:50 for a 20 min buffer — no security, no bag drop. Departure is 18:30, NOT 19:00. Buy dinner at Euston before boarding: nothing in Windermere or Bowness is verified open past 22:30 and Vinegar Jones shuts 19:30. Avanti to Glasgow Central, Coach B seats 41 + 49. At Warrington Bank Quay (20:14) STAY ON THE TRAIN — split ticket, just show the next one, Coach E seats 01 + 05." },
+      { dayId: "d1", time: "21:10", title: "Oxenholme change → Windermere, walk to the guest house", emoji: "🛏️", note: "10 min change onto the 21:20 Northern branch — booked on the same ticket, so the connection is protected. Windermere 21:39. The guest house is on Church St in town, walkable from the station — that is the entire reason for this night. Room 2, first floor; entry codes are in Notion, not on this board." },
+
+      { dayId: "d2", time: "11:00", title: "Checkout, then car pickup at Enterprise Kendal", emoji: "🚗", note: "Checkout is 11:00 and the 11:00–11:30 call can be taken from the room or the lobby. Then Kendal for the car: Mintsfeet Road, prepaid £185.24, branch open to 18:00 — a later pickup costs nothing, so don't rush it. Backstop if the window slips: 555 bus, Windermere 11:02 → Kendal 11:54, then a 20–25 min walk." },
+      { dayId: "d2", time: "14:00", title: "Check in — 3 Cambridge Villas, Ambleside", emoji: "🛏️", note: "Check-in 11:30–20:30, bags held earlier. £340 balance due at the desk. Free parking and hot buffet breakfast included. 🎉 Liz joins from today and is staying nearby." },
+      { dayId: "d2", time: "17:30", title: "Wansfell Pike — evening fell", emoji: "🥾", note: "FREE. 4.7 km, 450 m, ~2h15, moderate with steep rocky sections, starting behind The White Lion. The best evening walk on this trip. 🌧️ 60% rain today — if it's bucketing, swap to Jenkin Crag: 4 km, 1h30, easy and wooded, and guaranteed down in daylight." },
       { dayId: "d2", time: "", title: "Kat — Hill Top + the west shore", emoji: "🏡", note: "£17, timed entry, booking essential. Bowness → Ash Landing boat then ~2 miles mostly off-road; Hawkshead 2 miles on, or the 505 back." },
-      { dayId: "d3", time: "11:00", title: "Work morning + the 11:00–11:30 call", emoji: "💻", note: "From the room in Ambleside." },
-      { dayId: "d3", time: "17:30", title: "Loughrigg Fell — out-and-back", emoji: "🥾", note: "FREE. The full 10 km circuit is too long for a 17:30 start — do the direct out-and-back to the summit via Rothay Park." },
-      { dayId: "d3", time: "", title: "Spare slot — Stock Ghyll Force", emoji: "💧", note: "30 min round trip from Market Place. ⚠️ Stepped and slippery when wet." },
-      { dayId: "d3", time: "20:00", title: "Waterhead + Borrans Road lakeshore", emoji: "🌅", note: "Flat, 20 min. The light on Windermere at 20:00 is the best of the day." },
+
+      { dayId: "d3", time: "09:00", title: "Work day — call 11:00–11:30", emoji: "💻", note: "From the room in Ambleside. No coworking needed — settled 18 Aug." },
+      { dayId: "d3", time: "17:30", title: "Loughrigg Fell, then Waterhead at dusk", emoji: "🥾", note: "FREE. The full 10 km circuit is too long for a 17:30 start — do the direct out-and-back to the summit via Rothay Park. Then the flat Borrans Road lakeshore at Waterhead around 20:00; the light on Windermere then is the best of the day. 🟢 Best evening of the week: fells 70% cloud-free, wind under 10 mph. Spare slot if you want more: Stock Ghyll Force, 30 min from Market Place — ⚠️ stepped and slippery when wet." },
       { dayId: "d3", time: "", title: "Kat — Grasmere + the Wordsworth corridor", emoji: "🍪", note: "599 open-top or 555, ~20 min. Gingerbread shop open daily; Rydal Mount last entry 15:00. All four sights sit on one 2-mile corridor — one stop, not four." },
-      { dayId: "d4", time: "09:00", title: "FAIRFIELD HORSESHOE — the big one", emoji: "⛰️", note: "LOCKED 18 Aug. 18.4 km, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical, and it starts at the front door — start when you like." },
-      { dayId: "d4", time: "17:30", title: "Eat EARLY — walk in by 17:30–18:30", emoji: "🍽️", note: "No takeaway allowed at the B&B and it's peak August. This is the night the dining risk actually bites." },
-      { dayId: "d4", time: "", title: "Live-day swap only — Helvellyn via Striding Edge", emoji: "⚠️", note: "Superseded but retained. Grade 1 scramble, exposed. Needs the early bus and everyone's agreement." },
-      { dayId: "d4", time: "", title: "Wet flex (parked) — Langdale Pikes", emoji: "🌧️", note: "Forecast says 20% rain and light wind, so this stays parked. 516 to Dungeon Ghyll, last bus back ~22:26." },
-      { dayId: "d5", time: "09:00", title: "Bus or drive Ambleside → Keswick", emoji: "🚌", note: "555 takes ~47 min, or drive — you have the car. Last 555 back ~23:01, so zero pressure on the return." },
-      { dayId: "d5", time: "09:45", title: "Keswick Launch → Hawes End", emoji: "⛴️", note: "From £3; the walkers' launch is ~09:45. The only car-free route to the Catbells trailhead — and the better one anyway." },
+
+      { dayId: "d4", time: "09:00", title: "FAIRFIELD HORSESHOE — the big one", emoji: "⛰️", note: "LOCKED 18 Aug. 18.4 km, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical, and it starts at the front door — so start when you like. Carry 2 L each, all your food, layers and a head torch: no shelter and no water on the tops." },
+      { dayId: "d4", time: "17:30", title: "Eat EARLY — walk in by 17:30–18:30", emoji: "🍽️", note: "No takeaway allowed at the B&B and it's peak August. This is the night the dining risk actually bites — you'll come off the fell starving." },
+      { dayId: "d4", time: "", title: "Parked alternatives — Helvellyn or Langdale", emoji: "⚠️", note: "Live-day swap only: Helvellyn via Striding Edge, a Grade 1 exposed scramble needing the early bus and everyone's agreement. Wet flex: Langdale Pikes via the 516 to Dungeon Ghyll, last bus back ~22:26. Forecast is 20% rain and light wind, so both stay parked." },
+
+      { dayId: "d5", time: "09:00", title: "Ambleside → Keswick, then the launch to Hawes End", emoji: "⛴️", note: "555 takes ~47 min, or drive — you have the car. Keswick Launch from £3, walkers' launch ~09:45. It is the only car-free route to the Catbells trailhead and the better one anyway. Last 555 back ~23:01, so zero pressure on the return." },
       { dayId: "d5", time: "10:15", title: "Catbells", emoji: "🥾", note: "FREE. ~6 km circular, 445 m, 2–2.5 h, moderate with one short scramble near the top. The best scenery-to-effort ratio in the Lake District." },
-      { dayId: "d5", time: "13:00", title: "Derwentwater lakeshore + launch back", emoji: "🚶", note: "The circular calls at several jetties — walk one leg and sail the other." },
-      { dayId: "d5", time: "15:00", title: "Keswick town — Friar's Crag + lunch", emoji: "☕", note: "Theatre by the Lake grounds, the market square, Bryson's of Keswick for lunch." },
+      { dayId: "d5", time: "13:00", title: "Derwentwater lakeshore, launch back, then Keswick town", emoji: "🚶", note: "The circular calls at several jetties — walk one leg and sail the other. Then Keswick: Friar's Crag, the Theatre by the Lake grounds, the market square, and Bryson's for lunch." },
       { dayId: "d5", time: "17:00", title: "Castlerigg Stone Circle", emoji: "🗿", note: "FREE. Neolithic circle ringed by mountains, ~30 min walk from the centre. ✂️ First thing to cut — the light on Derwentwater is worth more." },
-      { dayId: "d6", time: "10:30", title: "Checkout 10:30 — pay the £340 balance", emoji: "🧳", note: "Bags straight into the car." },
-      { dayId: "d6", time: "10:45", title: "Work until 16:30 — desk TBD", emoji: "💻", note: "The room is gone for six working hours. Ask at breakfast about the guest lounge; fallbacks: Force Café or Ambleside Library (Mon 10:00–17:00). Calls 11:00–11:30 and 13:00–14:00." },
-      { dayId: "d6", time: "16:30", title: "Drive Ambleside → Kendal — leave 16:45 latest", emoji: "🚗", note: "A591, 13 miles, ~30 min." },
-      { dayId: "d6", time: "17:30", title: "Car back — Enterprise Kendal", emoji: "🔑", note: "Handed back in person. Branch closes 18:00 with no key drop — the 17:30 return leaves 30 min of slack." },
-      { dayId: "d6", time: "17:45", title: "Taxi → Oxenholme, ~10 min", emoji: "🚕", note: "At Oxenholme ~18:00 against a 19:26 departure — 1h26 of slack. Eat in Kendal rather than wait on a platform." },
+
+      { dayId: "d6", time: "10:30", title: "Checkout 10:30, then work until 16:30", emoji: "💻", note: "Pay the £340 balance and put the bags straight in the car. The room is gone for six working hours — ask at breakfast about the guest lounge; fallbacks are Force Café on Stockghyll Lane or Ambleside Library (Mondays 10:00–17:00)." },
+      { dayId: "d6", time: "16:30", title: "Drive to Kendal, car back 17:30, taxi to Oxenholme", emoji: "🚗", note: "Leave Ambleside 16:45 at the absolute latest. A591, 13 miles, ~30 min. Car handed back in person — Enterprise closes 18:00 with no key drop, so the 17:30 return leaves 30 min of slack. Then a ~10 min taxi to Oxenholme, there by ~18:00 against a 19:26 departure. Eat in Kendal rather than wait on a platform." },
       { dayId: "d6", time: "19:26", title: "Avanti → London Euston, arrives 22:27", emoji: "🚆", note: "Coach F, seats 62 + 66. Non-refundable Advance — the one leg that binds the whole day." },
       { dayId: "d6", time: "", title: "Kat — Blackwell, the Arts & Crafts house", emoji: "🎨", note: "£12, open daily, no Monday closure. Drop-off on the way through to Kendal; collect ~16:15." }
     ];
@@ -1321,6 +1303,18 @@
         });
         p.lakesDedupV1 = true;
       }
+      // v2: replace the original 36-step seed with the consolidated 20-block plan.
+      // Only removes rows that are still the untouched original seed (id seed_* AND a
+      // known old title) so anything the group added or renamed survives. Idempotent.
+      if (!p.lakesConsolidateV2) {
+        const OLD = new Set(["leave home — euston with a 20 min buffer","buy dinner at euston — confirmed plan","avanti → glasgow central — coach b, seats 41 + 49","warrington bank quay — stay on the train","oxenholme — 10 min change to the branch","windermere — walk to the hotel","morning work block","the clash — checkout 11:00 vs the 11:00–11:30 call","enterprise kendal — car pickup","13:00–14:00 catchup call — the day-breaker","check in — 3 cambridge villas, ambleside","wansfell pike — evening fell","wet fallback — jenkin crag","kat — hill top + the west shore","work morning + the 11:00–11:30 call","loughrigg fell — out-and-back","spare slot — stock ghyll force","waterhead + borrans road lakeshore","kat — grasmere + the wordsworth corridor","fairfield horseshoe — the big one","eat early — walk in by 17:30–18:30","live-day swap only — helvellyn via striding edge","wet flex (parked) — langdale pikes","bus or drive ambleside → keswick","keswick launch → hawes end","catbells","derwentwater lakeshore + launch back","keswick town — friar's crag + lunch","castlerigg stone circle","checkout 10:30 — pay the £340 balance","work until 16:30 — desk tbd","drive ambleside → kendal — leave 16:45 latest","car back — enterprise kendal","taxi → oxenholme, ~10 min","avanti → london euston, arrives 22:27","kat — blackwell, the arts & crafts house"]);
+        p.items = p.items.filter(it => !(String(it.id || "").startsWith("seed_") && OLD.has((it.title || "").trim().toLowerCase())));
+        const have2 = new Set(p.items.map(it => (it.title || "").trim().toLowerCase()));
+        p.items = p.items.concat(LAKES_SEED
+          .filter(x => !have2.has(x.title.trim().toLowerCase()))
+          .map((x, i) => ({ id: "c2_" + i, dayId: x.dayId, title: x.title, emoji: x.emoji || guessEmoji(x.title), city: "", kind: x.kind || "activity", note: x.note || "", time: x.time || "" })));
+        p.lakesConsolidateV2 = true;
+      }
       return p;
     }
 
@@ -1332,10 +1326,9 @@
       players: [
         { name: "Jason", initials: "J", colour: colours[0], vibe: null, piece: "🥾" },
         { name: "Kat", initials: "K", colour: colours[1], vibe: null, piece: null },
-        { name: "Liz", initials: "L", colour: colours[2], vibe: null, piece: null }
+        { name: "Liz", initials: "L", colour: colours[2], vibe: null, piece: null, arrival: { date: "2026-08-20", time: "", info: "Own travel — joins Thu" }, departure: { date: "2026-08-24", time: "", info: "Own travel" } }
       ],
       groupDone: {
-        lizCovered: false,
         thursdayFix: false,
         bnbArrival: false,
         coinsApps: false,
@@ -1352,7 +1345,6 @@
     };
 
     const groupTasks = [
-      { id: "lizCovered", icon: "👤", title: "Get Liz a seat and a bed", desc: "Nothing currently booked covers Liz — rail is 2 seats on a Two Together Railcard, and both rooms are booked for two. The train is Wednesday evening.", priority: "P1" },
       { id: "thursdayFix", icon: "🔴", title: "Make Thursday work", desc: "11:00 checkout vs the 11:00 call vs 12:00 car pickup 20 min away vs the 13:00 catchup. Pick one fix in the decision room.", priority: "P1" },
       { id: "bnbArrival", icon: "✉️", title: "Tell the B&B the real Thursday arrival", desc: "The plan still assumes ~12:30, which no longer holds. Call 01539 432307 — check-in runs 11:30–20:30, bags held earlier.", priority: "P1" },
       { id: "coinsApps", icon: "🪙", title: "Draw ~£20 in £1 coins + parking apps", desc: "Card payment fails at car parks with no signal — New Dungeon Ghyll has no phone-pay at all. Install RingGo, PayByPhone, JustPark + the Stagecoach app.", priority: "P1" },
@@ -1646,7 +1638,6 @@
     // Which Crew Desk rooms belong under which group task. Custom rooms created
     // from a task carry a taskId field and match that way.
     const TASK_ROOM_MAP = {
-      lizCovered: ["r_liz"],
       thursdayFix: ["r_thu"],
       mondayDesk: ["r_mon"],
       itinerary: ["r_sat"]
@@ -2201,7 +2192,6 @@
       ensureDesk();
       const isBooked = r => !!r && (r.status === "decided" || (r.log && r.log.status === "booked"));
       const link = (roomId, taskId) => { const r = state.desk.rooms.find(x => x.id === roomId); if (r) state.groupDone[taskId] = isBooked(r); };
-      link("r_liz", "lizCovered");
       link("r_thu", "thursdayFix");
       link("r_mon", "mondayDesk");
     }
@@ -2679,23 +2669,25 @@
     // keyword rules (for example "tea" or "coast") from assigning the wrong
     // artwork and guarantees every itinerary card has a deliberate image.
     const EXACT_SCENE = {
-      "windermere — walk to the hotel": "scene-windermere.jpg",
+      "leave home → euston, board the 18:30 together": "scene-windermere.jpg",
+      "oxenholme change → windermere, walk to the guest house": "scene-windermere.jpg",
+      "checkout, then car pickup at enterprise kendal": "scene-kirkstone.jpg",
+      "check in — 3 cambridge villas, ambleside": "scene-ambleside.jpg",
       "wansfell pike — evening fell": "scene-ambleside.jpg",
-      "wet fallback — jenkin crag": "scene-windermere.jpg",
       "kat — hill top + the west shore": "scene-hilltop.jpg",
-      "loughrigg fell — out-and-back": "scene-rydal.jpg",
-      "spare slot — stock ghyll force": "scene-ambleside.jpg",
-      "waterhead + borrans road lakeshore": "scene-windermere.jpg",
+      "work day — call 11:00–11:30": "scene-ambleside.jpg",
+      "loughrigg fell, then waterhead at dusk": "scene-rydal.jpg",
       "kat — grasmere + the wordsworth corridor": "scene-grasmere.jpg",
       "fairfield horseshoe — the big one": "scene-kirkstone.jpg",
-      "live-day swap only — helvellyn via striding edge": "scene-helvellyn.jpg",
-      "wet flex (parked) — langdale pikes": "scene-dungeonghyll.jpg",
-      "bus or drive ambleside → keswick": "scene-keswick.jpg",
-      "keswick launch → hawes end": "scene-derwentwater.jpg",
+      "eat early — walk in by 17:30–18:30": "scene-hawkshead.jpg",
+      "parked alternatives — helvellyn or langdale": "scene-helvellyn.jpg",
+      "ambleside → keswick, then the launch to hawes end": "scene-derwentwater.jpg",
       "catbells": "scene-catbells.jpg",
-      "derwentwater lakeshore + launch back": "scene-borrowdale.jpg",
-      "keswick town — friar's crag + lunch": "scene-keswick.jpg",
+      "derwentwater lakeshore, launch back, then keswick town": "scene-keswick.jpg",
       "castlerigg stone circle": "scene-castlerigg.jpg",
+      "checkout 10:30, then work until 16:30": "scene-ambleside.jpg",
+      "drive to kendal, car back 17:30, taxi to oxenholme": "scene-kirkstone.jpg",
+      "avanti → london euston, arrives 22:27": "scene-windermere.jpg",
       "kat — blackwell, the arts & crafts house": "scene-windermere.jpg"
     };
 
