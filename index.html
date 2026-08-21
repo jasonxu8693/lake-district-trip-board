@@ -1225,7 +1225,7 @@
           { id: "mon_force", by: null, researcher: "Research", title: "Force Café, Stockghyll Lane", link: "", price: "Coffee money", availability: "⚠️ Hours unverified", availabilityTone: "warn", notes: "The only café in the area advertising a guaranteed desk and reliable wifi. Previously researched as Mon–Thu 09:30–17:00, but hours could not be re-verified — the site blocks automated access.", votes: {} },
           { id: "mon_lib", by: null, researcher: "Research", title: "Ambleside Library", link: "", price: "Free", availability: "Open Mon 10:00–17:00", availabilityTone: "done", notes: "Open Mondays 10:00–17:00 — exactly the window. ⚠️ Suitability for back-to-back video calls unverified.", votes: {} }
         ], status: "open", chosen: null },
-        { id: "r_sat", emoji: "⛰️", kind: "custom", title: "Saturday — Fairfield or Helvellyn", desc: "Already decided — kept here so nobody reopens it on the walk in.", owners: [], log: { status: "booked", text: "Fairfield Horseshoe locked 18 Aug — zero transport dependency, no start-time pressure, degrades rather than cancels. Helvellyn is a live-day swap only, with everyone's agreement." }, options: [
+        { id: "r_sat", emoji: "⛰️", kind: "custom", title: "Saturday — Helvellyn via Striding Edge", desc: "Changed 21 Aug: Helvellyn is on, reached by car. The bus deadline that ruled it out no longer applies. Conditions are the only remaining gate.", owners: [], log: { status: "booked", text: "HELVELLYN via Striding Edge, decided 21 Aug — driving to Glenridding, so no bus deadline. ⛔ Grade 1 exposed scramble: recheck mwis.org.uk on the morning and do not go onto the Edge in wind, wet rock or cloud. Bail-out is the Red Tarn path to the summit. Fairfield Horseshoe remains the no-transport, non-technical fallback if conditions are wrong. Helvellyn is a live-day swap only, with everyone's agreement." }, options: [
           { id: "sat_fair", by: null, researcher: "Research", title: "Fairfield Horseshoe", link: "", price: "FREE", availability: "LOCKED 18 Aug", availabilityTone: "done", notes: "18.4 km, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical — and it starts and ends at the front door, so no bus and no start-time pressure.", votes: {} },
           { id: "sat_helv", by: null, researcher: "Research", title: "Helvellyn via Striding Edge", link: "", price: "FREE + bus fares", availability: "Live-day swap only", availabilityTone: "warn", notes: "Grade 1 scramble, exposed. Weather now viable (20% rain, gusts 13 mph) — but the early-bus + last-bus arithmetic leaves margin only if nothing goes wrong, on a 508 timetable that is still unverified.", votes: {} }
         ], status: "decided", chosen: "sat_fair" },
@@ -1242,7 +1242,7 @@
       { id: "d1", iso: "2026-08-19", date: "Wed 19 Aug", city: "London → Windermere", logistics: true, note: "Travel only — don't try to add an activity. Sun 05:55–20:35 · 17°/12° · 70% rain (irrelevant, you're on a train)." },
       { id: "d2", iso: "2026-08-20", date: "Thu 20 Aug", city: "Windermere → Ambleside", note: "The over-committed day — fix the clash in the Crew Desk before anything else. 18°/9° · 60% rain." },
       { id: "d3", iso: "2026-08-21", date: "Fri 21 Aug", city: "Ambleside", note: "Jason works, evening fell. Fells ~70% cloud-free — the best evening of the week. 17°/9° · 40% rain." },
-      { id: "d4", iso: "2026-08-22", date: "Sat 22 Aug", city: "Ambleside — the big one", note: "Fairfield Horseshoe, 8 Wainwrights. Eat early — dinner is a walk-in. Sunset 20:28 · 18°/8° · 20% rain." },
+      { id: "d4", iso: "2026-08-22", date: "Sat 22 Aug", city: "Helvellyn & Ullswater", note: "Striding Edge — the one properly exposed day. Drive to Glenridding, park by 08:30. Recheck MWIS before you commit. Sunset 20:28 · 18°/8° · 20% rain." },
       { id: "d5", iso: "2026-08-23", date: "Sun 23 Aug", city: "Keswick & Derwentwater", note: "Deliberately lighter than Saturday — one directional sweep, nothing doubles back. 19°/8° · 10% rain." },
       { id: "d6", iso: "2026-08-24", date: "Mon 24 Aug", city: "Ambleside → London", logistics: true, note: "Work, then the drive-and-train sequence. Leave Ambleside 16:45 at the absolute latest. 19°/10° · 20% rain." }
     ];
@@ -1263,9 +1263,9 @@
       { dayId: "d3", time: "17:30", title: "Loughrigg Fell, then Waterhead at dusk", emoji: "🥾", note: "FREE. The full 10 km circuit is too long for a 17:30 start — do the direct out-and-back to the summit via Rothay Park. Then the flat Borrans Road lakeshore at Waterhead around 20:00; the light on Windermere then is the best of the day. 🟢 Best evening of the week: fells 70% cloud-free, wind under 10 mph. Spare slot if you want more: Stock Ghyll Force, 30 min from Market Place — ⚠️ stepped and slippery when wet." },
       { dayId: "d3", time: "", title: "Kat — Grasmere + the Wordsworth corridor", emoji: "🍪", note: "599 open-top or 555, ~20 min. Gingerbread shop open daily; Rydal Mount last entry 15:00. All four sights sit on one 2-mile corridor — one stop, not four." },
 
-      { dayId: "d4", time: "09:00", title: "FAIRFIELD HORSESHOE — the big one", emoji: "⛰️", note: "LOCKED 18 Aug. 18.4 km, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical, and it starts at the front door — so start when you like. Carry 2 L each, all your food, layers and a head torch: no shelter and no water on the tops." },
-      { dayId: "d4", time: "17:30", title: "Eat EARLY — walk in by 17:30–18:30", emoji: "🍽️", note: "No takeaway allowed at the B&B and it's peak August. This is the night the dining risk actually bites — you'll come off the fell starving." },
-      { dayId: "d4", time: "", title: "Parked alternatives — Helvellyn or Langdale", emoji: "⚠️", note: "Live-day swap only: Helvellyn via Striding Edge, a Grade 1 exposed scramble needing the early bus and everyone's agreement. Wet flex: Langdale Pikes via the 516 to Dungeon Ghyll, last bus back ~22:26. Forecast is 20% rain and light wind, so both stay parked." },
+      { dayId: "d4", time: "07:45", title: "Drive Ambleside → Glenridding, park early", emoji: "🚗", note: "A592 over Kirkstone Pass, ~13 miles, 35–40 min. The Ambleside side is 'The Struggle' — steep, narrow and single-track in places, so allow the full 40 min. ⚠️ Glenridding village car park fills very early on an August Saturday: aim to be parked by 08:30 or you will be hunting. 🪙 Carry coins — LDNPA machines fail where there is no signal and Glenridding is patchy. Backup: Patterdale, a mile further down the lake." },
+      { dayId: "d4", time: "08:45", title: "HELVELLYN via Striding Edge", emoji: "⛰️", note: "~9 miles, ~1,000 m, 6–7 h. Grade 1 scramble and genuinely exposed — a narrow arête with long drops both sides, then a short chimney onto the summit plateau. 🚗 The car kills the old blocker: no 19:58 last bus, so you leave when you like and are never racing a timetable. Down via Swirral Edge or the Red Tarn path. Carry 2 L each, all your food, layers, head torch, OL5 + compass." },
+      { dayId: "d4", time: "17:30", title: "Dinner — eat early", emoji: "🍽️", note: "Nearest first: The Traveller's Rest or the Inn on the Lake in Glenridding, straight off the fell before the drive back — ⚠️ hours unverified, ring ahead. Otherwise back to Ambleside for 17:30–18:30. No takeaway is allowed at the B&B and it is peak August, so late means waiting." },
 
       { dayId: "d5", time: "09:00", title: "Ambleside → Keswick, then the launch to Hawes End", emoji: "⛴️", note: "555 takes ~47 min, or drive — you have the car. Keswick Launch from £3, walkers' launch ~09:45. It is the only car-free route to the Catbells trailhead and the better one anyway. Last 555 back ~23:01, so zero pressure on the return." },
       { dayId: "d5", time: "10:15", title: "Catbells", emoji: "🥾", note: "FREE. ~6 km circular, 445 m, 2–2.5 h, moderate with one short scramble near the top. The best scenery-to-effort ratio in the Lake District." },
@@ -1314,6 +1314,17 @@
           .filter(x => !have2.has(x.title.trim().toLowerCase()))
           .map((x, i) => ({ id: "c2_" + i, dayId: x.dayId, title: x.title, emoji: x.emoji || guessEmoji(x.title), city: "", kind: x.kind || "activity", note: x.note || "", time: x.time || "" })));
         p.lakesConsolidateV2 = true;
+      }
+      // v3: Saturday changed from Fairfield to Helvellyn-by-car (21 Aug, mid-trip).
+      // Removes only the untouched v2 Saturday rows, then re-seeds that day.
+      if (!p.lakesSatV3) {
+        const OLDSAT = new Set(["fairfield horseshoe — the big one","eat early — walk in by 17:30–18:30","parked alternatives — helvellyn or langdale"]);
+        p.items = p.items.filter(it => !(String(it.id || "").startsWith("c2_") && OLDSAT.has((it.title || "").trim().toLowerCase())));
+        const have3 = new Set(p.items.map(it => (it.title || "").trim().toLowerCase()));
+        p.items = p.items.concat(LAKES_SEED
+          .filter(x => x.dayId === "d4" && !have3.has(x.title.trim().toLowerCase()))
+          .map((x, i) => ({ id: "sat3_" + i, dayId: x.dayId, title: x.title, emoji: x.emoji || guessEmoji(x.title), city: "", kind: x.kind || "activity", note: x.note || "", time: x.time || "" })));
+        p.lakesSatV3 = true;
       }
       return p;
     }
@@ -2654,7 +2665,7 @@
 
     // ---- Visual itinerary: illustrated poster carousel (overview + per-day slides) ----
     const DAY_ACCENT = { d1: "#6f9fc9", d2: "#c98e4a", d3: "#5aa87a", d4: "#e07a3f", d5: "#5fb0d9", d6: "#a795d6" };
-    const DAY_SCENE = { d1: "scene-windermere.jpg", d2: "scene-ambleside.jpg", d3: "scene-howtown.jpg", d4: "scene-dungeonghyll.jpg", d5: "scene-borrowdale.jpg", d6: "scene-bleatarn.jpg" };
+    const DAY_SCENE = { d1: "scene-windermere.jpg", d2: "scene-ambleside.jpg", d3: "scene-howtown.jpg", d4: "scene-helvellyn.jpg", d5: "scene-borrowdale.jpg", d6: "scene-bleatarn.jpg" };
     const DAY_DETAILS = {
       d1: { sleep: "Windermere Central Hotel — one night", move: "Train: Euston 18:30 → Windermere 21:39", prep: "Dinner bought at Euston · Two Together Railcard" },
       d2: { sleep: "3 Cambridge Villas, Ambleside (4 nights)", move: "🔴 Checkout 11:00 · car pickup Kendal · move to Ambleside", prep: "£340 balance · physical licence · the booking card" },
@@ -2680,8 +2691,10 @@
         { icon: "👤", title: "Kat's Grasmere corridor", lines: ["599 open-top or 555, ~20 min. ⚠️ The 599 stops ~19:35 — the 555 runs much later.", "Gingerbread shop open every day of the year bar four; Rydal Mount 10:30–16:00, last entry 15:00.", "Rydal Water is flat and walkable back to the bus. All four sights sit on one 2-mile corridor — one stop, not four."] }
       ],
       d4: [
-        { icon: "⛰️", title: "The walk", lines: ["18.4 km / 11.4 mi, 928 m, 8 Wainwrights, 6–8 h. Hard but entirely non-technical — no scrambling, no exposure.", "Starts and ends at the front door — no bus, no start-time pressure. Sunset 20:28, so even a late start is safe on daylight.", "Carry 2 L water each, all your food, layers, head torch, OL7 + compass. There is no shelter and no water on the tops.", "✂️ Escape hatch: cut the horseshoe short at Dove Crag and drop back to Ambleside — you lose the western arm, not the day."] },
-        { icon: "🍽️", title: "The night that bites", lines: ["Eat early, 17:30–18:30. No takeaway allowed at the B&B, it's peak August, and you'll come off the fell starving.", "🌧️ Flex (parked): 516 to Langdale, last bus back ~22:26. 🪙 New Dungeon Ghyll car park has NO phone-pay — coins only.", "Forecast 20% rain, gusts 13 mph — about as good as an August Saturday gets. The wet flex should stay parked."] }
+        { icon: "🛑", title: "Before you commit — read this", lines: ["Striding Edge is a Grade 1 scramble with sustained exposure. It is the only genuinely dangerous thing on this trip and people are killed on it most years.", "🔴 Recheck the MOUNTAIN forecast on the morning, not the valley one: mwis.org.uk (English Lake District). A valley forecast tells you nothing about a 950 m arête.", "⛔ Do not go onto the Edge in strong wind, wet rock, or cloud below the summit. Wind is the one that pushes people off — it funnels and gusts hard along the crest.", "The bail-outs are real and unembarrassing: from the Hole-in-the-Wall take the Red Tarn path to the summit and miss the Edge entirely, or turn round. Both still give you the mountain."] },
+        { icon: "🚗", title: "Drive + parking", lines: ["A592 over Kirkstone Pass, ~13 miles, 35–40 min. 'The Struggle' out of Ambleside is steep and narrow — allow the full 40.", "⚠️ Glenridding village car park fills very early on an August Saturday. Parked by 08:30 or expect to hunt. Backup: Patterdale, a mile on.", "🪙 Coins. LDNPA machines fail without signal and Glenridding coverage is patchy.", "🚗 The car is why this day works at all — it removes the 19:58 last-bus deadline that ruled Helvellyn out on 18 Aug."] },
+        { icon: "⛰️", title: "The walk", lines: ["~9 miles, ~1,000 m, 6–7 h. Glenridding → Hole-in-the-Wall → Striding Edge → the chimney → summit, down by Swirral Edge or the Red Tarn path.", "Carry 2 L water each, all your food, layers, head torch, OL5 and a compass. No shelter and no water up there.", "Hands will be needed on the Edge. Anything in your hands should be in the pack instead.", "Sunset 20:28, so an 08:45 start leaves a very large daylight margin even at 7 hours."] },
+        { icon: "🍽️", title: "Dinner", lines: ["Nearest: The Traveller's Rest or the Inn on the Lake, Glenridding — straight off the fell before driving back. ⚠️ Hours unverified, ring ahead.", "Otherwise Ambleside at 17:30–18:30. No takeaway allowed at the B&B and it is peak August, so late means waiting.", "✂️ Nothing else is scheduled today by design — the Edge is the whole day."] }
       ],
       d5: [
         { icon: "🟢", title: "Shape of the day", lines: ["10% rain, 19° — the clearest day of the week, and deliberately the lighter one after Saturday.", "One directional sweep: Ambleside → Keswick → Derwentwater → back. Nothing doubles back on itself.", "Keswick Launch from £3; the walkers' launch ~09:45 calls at Hawes End — there is no bus to the Catbells trailhead, so the launch is the route whether or not you drive.", "Last 555 back from Keswick ~23:01 — no pressure at all, and you have the car anyway."] },
@@ -2713,9 +2726,9 @@
       "work day — call 11:00–11:30": "scene-work.jpg",
       "loughrigg fell, then waterhead at dusk": "scene-rydal.jpg",
       "kat — grasmere + the wordsworth corridor": "scene-grasmere.jpg",
-      "fairfield horseshoe — the big one": "scene-fairfield.jpg",
-      "eat early — walk in by 17:30–18:30": "scene-dinner.jpg",
-      "parked alternatives — helvellyn or langdale": "scene-helvellyn.jpg",
+      "drive ambleside → glenridding, park early": "scene-kirkstone.jpg",
+      "helvellyn via striding edge": "scene-helvellyn.jpg",
+      "dinner — eat early": "scene-dinner.jpg",
       "ambleside → keswick, then the launch to hawes end": "scene-derwentwater.jpg",
       "catbells": "scene-catbells.jpg",
       "derwentwater lakeshore, launch back, then keswick town": "scene-keswick.jpg",
@@ -2825,10 +2838,10 @@
         parking: "New Dungeon Ghyll (NT) — coins only, no phone-pay, no signal. Fills by mid-morning in August.",
         link: "https://www.google.com/maps/search/?api=1&query=New+Dungeon+Ghyll+Great+Langdale", linkLabel: "Open in Maps ↗" },
       { match: /helvellyn|striding/i, name: "Helvellyn via Striding Edge", tag: "⚠️ Grade 1 scramble · exposed",
-        stats: [{ k: "Distance", v: "~9 km" }, { k: "Ascent", v: "~1,000 m" }, { k: "Time", v: "6–7 h" }, { k: "Format", v: "Ridge scramble" }],
+        stats: [{ k: "Distance", v: "~14 km / 9 mi" }, { k: "Ascent", v: "~1,000 m" }, { k: "Time", v: "6–7 h" }, { k: "Format", v: "Ridge scramble" }],
         route: "From Glenridding up to the Hole-in-the-Wall, then along Striding Edge — a genuinely narrow, exposed arête with big drops either side — to the final chimney and the summit plateau. Down via Swirral Edge or the Red Tarn path. The classic English ridge scramble.",
-        prep: ["Genuinely dangerous in wind, wet or low cloud. People die here every year.", "The arithmetic is the real problem: 09:50 arrival, 6–7 h hard scramble, 19:58 last bus. Margin only if nothing goes wrong.", "⚠️ The 508 summer 2026 timetable could not be verified — confirm in the Stagecoach app before committing.", "Needs a 08:50 bus from Windermere, which means leaving Ambleside ~08:30.", "Superseded by Fairfield on 18 Aug. Live-day swap only, and only with everyone's agreement."],
-        parking: "Glenridding village car park if driving — fills very early in August.",
+        prep: ["THIS IS SATURDAY'S PLAN (changed 21 Aug). Driving to Glenridding removes the old bus deadline — conditions are now the only gate.", "🛑 Genuinely dangerous in wind, wet rock or low cloud. People are killed here most years. Wind is the one that catches people out — it funnels and gusts hard along the crest.", "🔴 Recheck the MOUNTAIN forecast on the morning at mwis.org.uk (English Lake District). A valley forecast tells you nothing about a 950 m arête.", "Bail-outs, both unembarrassing: from the Hole-in-the-Wall take the Red Tarn path to the summit and skip the Edge, or turn round. Either still gives you the mountain.", "🚗 A592 over Kirkstone, ~13 miles, 35–40 min. Park at Glenridding by 08:30 — it fills very early in August.", "Hands are needed on the Edge — poles stowed, nothing loose in your hands."],
+        parking: "Glenridding village car park — pay & display, <strong>fills very early on an August Saturday, aim for 08:30</strong>. Carry coins: machines fail without signal. Backup: Patterdale, a mile further down the lake.",
         link: "https://www.google.com/maps/search/?api=1&query=Striding+Edge+Helvellyn", linkLabel: "Open in Maps ↗" },
       { match: /jenkin crag/i, name: "Jenkin Crag", tag: "Easy · wooded",
         stats: [{ k: "Distance", v: "4 km" }, { k: "Ascent", v: "~180 m" }, { k: "Time", v: "1h30" }, { k: "Format", v: "Out & back" }],
