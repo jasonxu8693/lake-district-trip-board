@@ -1391,6 +1391,10 @@
     // any more, so the custom-room passthrough below would preserve it in the
     // group's synced state forever. Retiring has to be explicit.
     const RETIRED_ROOMS = ["r_liz"];
+    // Force a room decision when the plan changed underneath the group. Saved
+    // `chosen` normally wins (it is the group’s call), so a default change alone
+    // never reaches them. Bump the version to re-apply; idempotent per version.
+    const DECISION_OVERRIDE = { r_sat: { v: "helvellyn-21aug", chosen: "sat_helv" } };
     // Bosses deliberately retired. Same reasoning: groupDone is merged from saved
     // state, so a key dropped from defaultState survives until it is deleted.
     const RETIRED_BOSSES = ["lizCovered"];
@@ -1437,6 +1441,9 @@
       const merged = base.map(d => {
         const s = byId[d.id]; if (!s) return d;
         const out = { ...d, owners: Array.isArray(s.owners) ? s.owners : [], options: mergeOptions(d.options, s.options), status: s.status || "open", chosen: s.chosen != null ? s.chosen : null };
+        const ov = DECISION_OVERRIDE[d.id];
+        if (ov && s.decisionOverride !== ov.v) { out.chosen = ov.chosen; out.status = "decided"; out.decisionOverride = ov.v; }
+        else if (s.decisionOverride) { out.decisionOverride = s.decisionOverride; }
         if (d.kind === "car") out.drivers = Array.isArray(s.drivers) ? s.drivers : [];
         return out;
       });
